@@ -123,6 +123,9 @@ string InputControl::CreatSerial(RepeatData &data)
             scanepos->set_camera(pos.camera);
             scanepos->set_index1(pos.index1);
             scanepos->set_enabled(pos.enabled);
+            scanepos->set_angle1(pos.angle1);
+            scanepos->set_angle2(pos.angle2);
+            scanepos->set_angle3(pos.angle3);
             auto pp = scanepos->mutable_pos();
             pp->set_x(pos.pos.x);
             pp->set_y(pos.pos.y);
@@ -205,184 +208,12 @@ string InputControl::CreatSerial(RepeatData &data)
 
     DecodeControl control;
     control.root = root;
-    std::thread ([&control](){
-        std::this_thread::sleep_for(std::chrono::milliseconds(100));
-        qDebug()<< control.log;
-    }).detach();
     qDebug()<<"准备数据库:"<<control.insert2SQL("clear/blade.db");
     qDebug()<<"数据库解码:"<<control.insertProtoData();
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
     control.closeDB();
 
 
-    // google::protobuf::ShutdownProtobufLibrary();
+    google::protobuf::ShutdownProtobufLibrary();
     return msg;
 }
-
-RepeatData InputControl::TestCreat()
-{
-    RepeatData  dd;
-    dd.date = "2020-04 20";
-    ACad id;
-    id.cadid = "dsdfsdk";
-    id.cadMidPoint=1;
-    id.cadBasePos=Pos(2,2,2,2,2,2);
-    dd.cad.push_back(id);
-    dd.cad.push_back(id);
-    dd.cad.push_back(id);
-
-    SeamInfo info;
-    info.cadid = "dsdfsdk";
-    info.seamID=64;
-    info.orderIndex = 8;
-    info.machine.motor1speed = 3;
-    info.machine.angle1_motor_start = 3;
-
-
-    AFramePos pp;
-    AScanePos df;
-
-    for(int i = 0;i<20;i++){
-        info.framePos.push_back(pp);
-        info.scanePos.push_back(df);
-    }
-
-    for(int i = 0;i<12;i++){
-        dd.seams.push_back(info);
-    }
-
-
-
-    qDebug()<<"生成数据成功!";
-    return dd;
-}
-
-
-
-//std::string InputControl::CreatSerial(RepeatData &data)
-//{
-//    /// 2.定义焊缝信息
-
-//    GOOGLE_PROTOBUF_VERIFY_VERSION;
-//    frame::Frame root;
-//    std::string msg;
-//    root.set_data("20200306");
-
-//    qDebug()<<"姿态-->"<< data.size();
-//    qDebug()<<"焊缝个数-->"<< data.at(0).posArray.size();
-//    qDebug()<<"Scane Pos个数-->"<< data.at(0).posArray.at(0).scanePos.size();
-//    qDebug()<<"Frame Pos个数-->"<< data.at(0).posArray.at(0).framePos.size();
-
-//    // foreach()
-
-
-//    foreach(Zitai_Info zitai_info, data){
-//        ///
-
-//        auto aZitai = root.add_zitai();
-//        RepeatSeamArray seamList = zitai_info.posArray;
-
-
-//        for(int i =0;i<seamList.size();i++){
-//            auto aSeam = aZitai->add_seam_vector();
-//            aSeam->set_bind1(seamList.at(i).bind1);
-//            aSeam->set_bind2(seamList.at(i).bind2);
-//            aSeam->set_seamname(seamList.at(i).seamName);
-//            aSeam->set_seamindex(seamList.at(i).seamIndex);
-//            aSeam->set_orderindex(seamList.at(i).orderIndex);
-//            aSeam->set_isscan(seamList.at(i).isScan);
-
-//            for(int j =0;j<seamList.at(i).scanePos.size();j++){
-//                auto pos = aSeam->add_scanepos();
-//                pos->set_x(seamList.at(i).scanePos.at(j).x);
-//                pos->set_y(seamList.at(i).scanePos.at(j).y);
-//                pos->set_z(seamList.at(i).scanePos.at(j).z);
-//                pos->set_a(seamList.at(i).scanePos.at(j).a);
-//                pos->set_b(seamList.at(i).scanePos.at(j).b);
-//                pos->set_c(seamList.at(i).scanePos.at(j).c);
-//            }
-//            for(int j =0;j<seamList.at(i).framePos.size();j++){
-//                auto pos = aSeam->add_framepos();
-//                pos->set_x(seamList.at(i).framePos.at(j).x);
-//                pos->set_y(seamList.at(i).framePos.at(j).y);
-//                pos->set_z(seamList.at(i).framePos.at(j).z);
-//                pos->set_a(seamList.at(i).framePos.at(j).a);
-//                pos->set_b(seamList.at(i).framePos.at(j).b);
-//                pos->set_c(seamList.at(i).framePos.at(j).c);
-//            }
-
-//        }
-
-//        aZitai->set_spacing1(zitai_info.spacing1);
-//        aZitai->set_spacing2(zitai_info.spacing2);
-//        aZitai->set_distance1(zitai_info.distance1);
-//        aZitai->set_distance2(zitai_info.distance2);
-//        aZitai->set_pos_motor_start(zitai_info.pos_motor_start);
-//        aZitai->set_pos_motor_stop(zitai_info.pos_motor_stop);
-
-//        aZitai->set_angle1_motor_start(zitai_info.angle1_motor_start);
-//        aZitai->set_angle1_motor_stop(zitai_info.angle1_motor_stop);
-//        aZitai->set_angle2_motor_stop(zitai_info.angle2_motor_stop);
-//        aZitai->set_angle2_motor_start(zitai_info.angle2_motor_start);
-//        aZitai->set_cadid(zitai_info.cadid);
-
-
-//        aZitai->set_motor1speed(zitai_info.motor1speed);
-//        aZitai->set_motor2speed(zitai_info.motor2speed);
-//        aZitai->set_motor3speed(zitai_info.motor3speed);
-
-//        aZitai->mutable_cadmidpos()->set_x(zitai_info.cadMidPos.x);
-//        aZitai->mutable_cadmidpos()->set_y(zitai_info.cadMidPos.y);
-//        aZitai->mutable_cadmidpos()->set_z(zitai_info.cadMidPos.z);
-//        aZitai->mutable_cadmidpos()->set_a(zitai_info.cadMidPos.a);
-//        aZitai->mutable_cadmidpos()->set_b(zitai_info.cadMidPos.b);
-//        aZitai->mutable_cadmidpos()->set_c(zitai_info.cadMidPos.c);
-
-//        aZitai->mutable_cadbasepos()->set_x(zitai_info.cadBasePos.x);
-//        aZitai->mutable_cadbasepos()->set_y(zitai_info.cadBasePos.y);
-//        aZitai->mutable_cadbasepos()->set_z(zitai_info.cadBasePos.z);
-//        aZitai->mutable_cadbasepos()->set_a(zitai_info.cadBasePos.a);
-//        aZitai->mutable_cadbasepos()->set_b(zitai_info.cadBasePos.b);
-//        aZitai->mutable_cadbasepos()->set_c(zitai_info.cadBasePos.c);
-//    }
-
-
-
-//    std::fstream  outStr("Gen/Out.txt",std::fstream::out | std::ios::binary);
-//    if(root.SerializePartialToString(&msg)){
-//        outStr<<msg;
-//        outStr<<std::endl;
-//        outStr.close();
-//        qDebug()<<"序列化成功!";
-//    }
-
-
-//    std::fstream  out("Gen/Out.gen",std::fstream::out | std::ios::binary);
-//    if(root.SerializePartialToOstream(&out)){
-//        out.flush();
-//        out.close();
-//        out.clear();
-//        qDebug()<<"序列化成功!";
-//    }
-
-
-
-//    int fd = open("Gen/Out.fd",O_CREAT|O_TRUNC|O_RDWR,0644);
-//    if(fd <= 0){
-//        perror("Gen/Out.fd false!");
-//        exit(0);
-//    }
-//    if(root.SerializePartialToFileDescriptor(fd)){
-//        qDebug()<<"序列化成功!";
-//    }
-
-//    close(fd);
-
-////    DecodeControl control;
-////    control.root = root;
-////    qDebug()<<"准备数据库:"<<control.insert2SQL("clear/blade.db");
-////    qDebug()<<"数据库解码:"<<control.insertProtoData();
-////    control.closeDB();
-
-//    google::protobuf::ShutdownProtobufLibrary();
-//    return msg;
-//}

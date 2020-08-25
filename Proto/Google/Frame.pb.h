@@ -398,6 +398,9 @@ class AScanePos :
     kPosFieldNumber = 1,
     kCameraFieldNumber = 2,
     kEnabledFieldNumber = 3,
+    kAngle1FieldNumber = 5,
+    kAngle2FieldNumber = 6,
+    kAngle3FieldNumber = 7,
     kIndex1FieldNumber = 4,
   };
   // .frame.Pos pos = 1;
@@ -433,6 +436,33 @@ class AScanePos :
   void _internal_set_enabled(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
+  // double angle1 = 5;
+  void clear_angle1();
+  double angle1() const;
+  void set_angle1(double value);
+  private:
+  double _internal_angle1() const;
+  void _internal_set_angle1(double value);
+  public:
+
+  // double angle2 = 6;
+  void clear_angle2();
+  double angle2() const;
+  void set_angle2(double value);
+  private:
+  double _internal_angle2() const;
+  void _internal_set_angle2(double value);
+  public:
+
+  // double angle3 = 7;
+  void clear_angle3();
+  double angle3() const;
+  void set_angle3(double value);
+  private:
+  double _internal_angle3() const;
+  void _internal_set_angle3(double value);
+  public:
+
   // int32 index1 = 4;
   void clear_index1();
   ::PROTOBUF_NAMESPACE_ID::int32 index1() const;
@@ -450,6 +480,9 @@ class AScanePos :
   ::frame::Pos* pos_;
   ::PROTOBUF_NAMESPACE_ID::int32 camera_;
   ::PROTOBUF_NAMESPACE_ID::int32 enabled_;
+  double angle1_;
+  double angle2_;
+  double angle3_;
   ::PROTOBUF_NAMESPACE_ID::int32 index1_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_Frame_2eproto;
@@ -2662,6 +2695,66 @@ inline void AScanePos::_internal_set_index1(::PROTOBUF_NAMESPACE_ID::int32 value
 inline void AScanePos::set_index1(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_index1(value);
   // @@protoc_insertion_point(field_set:frame.AScanePos.index1)
+}
+
+// double angle1 = 5;
+inline void AScanePos::clear_angle1() {
+  angle1_ = 0;
+}
+inline double AScanePos::_internal_angle1() const {
+  return angle1_;
+}
+inline double AScanePos::angle1() const {
+  // @@protoc_insertion_point(field_get:frame.AScanePos.angle1)
+  return _internal_angle1();
+}
+inline void AScanePos::_internal_set_angle1(double value) {
+  
+  angle1_ = value;
+}
+inline void AScanePos::set_angle1(double value) {
+  _internal_set_angle1(value);
+  // @@protoc_insertion_point(field_set:frame.AScanePos.angle1)
+}
+
+// double angle2 = 6;
+inline void AScanePos::clear_angle2() {
+  angle2_ = 0;
+}
+inline double AScanePos::_internal_angle2() const {
+  return angle2_;
+}
+inline double AScanePos::angle2() const {
+  // @@protoc_insertion_point(field_get:frame.AScanePos.angle2)
+  return _internal_angle2();
+}
+inline void AScanePos::_internal_set_angle2(double value) {
+  
+  angle2_ = value;
+}
+inline void AScanePos::set_angle2(double value) {
+  _internal_set_angle2(value);
+  // @@protoc_insertion_point(field_set:frame.AScanePos.angle2)
+}
+
+// double angle3 = 7;
+inline void AScanePos::clear_angle3() {
+  angle3_ = 0;
+}
+inline double AScanePos::_internal_angle3() const {
+  return angle3_;
+}
+inline double AScanePos::angle3() const {
+  // @@protoc_insertion_point(field_get:frame.AScanePos.angle3)
+  return _internal_angle3();
+}
+inline void AScanePos::_internal_set_angle3(double value) {
+  
+  angle3_ = value;
+}
+inline void AScanePos::set_angle3(double value) {
+  _internal_set_angle3(value);
+  // @@protoc_insertion_point(field_set:frame.AScanePos.angle3)
 }
 
 // -------------------------------------------------------------------

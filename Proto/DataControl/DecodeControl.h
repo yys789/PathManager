@@ -5,6 +5,7 @@
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QQueue>
+#include <QDateTime>
 #include <atomic>
 #include <future>
 
@@ -34,7 +35,9 @@ public:
     std::mutex g_mtx;
     std::condition_variable g_CV;
 private:
-
+    int connectName = 0;
+    QString conName;
+    QScopedPointer<QSqlQuery> queryP;
     QSqlDatabase dbT1;
     QMap<QString,QString> mapInsertQuery;   //插入专用
     QMap<QString,QString> mapUpdateQuery;   //更新专用

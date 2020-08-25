@@ -13,8 +13,6 @@ public:
 
     static std::string CreatSerial(RepeatData &data);
 
-    static RepeatData TestCreat();
-
 };
 
 #endif // INPUTCONTROL_H

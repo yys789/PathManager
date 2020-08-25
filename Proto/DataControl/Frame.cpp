@@ -11,22 +11,7 @@ Frame::~Frame()
     google::protobuf::ShutdownProtobufLibrary();
 }
 
-std::string Frame::N_double(double a)
-{
-    char buf[20];
-    ::sprintf(buf,"%.3f",a);
-    string f(buf);
-    a = atof(buf);
-    return f;
-}
 
-double Frame::F_double(double a)
-{
-    char buf[20];
-    ::sprintf(buf,"%.3f",a);
-    string f(buf);
-    return atof(buf);
-}
 
 
 std::string Frame::proto2PosStr(frame::Pos *p)

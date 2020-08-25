@@ -10,11 +10,11 @@
 
 DecodeControl::DecodeControl()
 {
-    QString query_SEAMRELATE("insert into SEAMRELATE(relate1,spacing1,distance1,relate2,spacing2,distance2,seamid) values(:relate1,:spacing1,:distance1,:relate2,:spacing2,:distance2,:seamid)");
+    QString query_SEAMRELATE("insert into SEAMRELATE(relate1,spacing1,distance1,relate2,spacing2,distance2,seamid,seflag) values(:relate1,:spacing1,:distance1,:relate2,:spacing2,:distance2,:seamid,:seflag)");
 
-    QString query_framepos("insert into framepos(index1,pos,seamid,weld,height,angle1,angle2,angle3,enabled) values(:index1,:pos,:seamid,:weld,:height,:angle1,:angle2,:angle3,enabled)");
+    QString query_framepos("insert into framepos(index1,pos,seamid,weld,height,enabled) values(:index1,:pos,:seamid,:weld,:height,:enabled)");
 
-    QString query_scanpos("insert into scanepos(index1,pos,seamid,camera) values(:index1,:pos,:seamid,:camera)");
+    QString query_scanpos("insert into scanepos(index1,pos,seamid,camera,enabled) values(:index1,:pos,:seamid,:camera,:enabled)");
 
     QString query_cad("insert into cad(cadid,midpoint,basepoint,safeloc,safeangle1) values(:cadid,:midpoint,:basepoint,:safeloc,:safeangle1)");
 
@@ -22,7 +22,7 @@ DecodeControl::DecodeControl()
 
     QString query_weldparams("insert into weldparams(seamid,s_w,i_w,v_w,t_end,i_end,v_end,range,axis_x,axis_y) values(:seamid,:s_w,:i_w,:v_w,:t_end,:i_end,:v_end,:range,:axis_x,:axis_y)");
 
-    QString u_ScanePos("update scanepos set enabled=1   where seamid=(select max(seamid) from scanepos) and index1=0 or index1=(select   max(index1) from scanepos where seamid=(select max(seamid) from scanepos))");
+    QString u_ScanePos("update scanepos set enabled=0   where seamid=(select max(seamid) from scanepos) and index1=0 or index1=(select   max(index1) from scanepos where seamid=(select max(seamid) from scanepos))");
 
 
     QString addSeaminfo("update seaminfo set MAIN=?,RANK=?,SEAMTYPE=?,DEPARTLEN=?,MIDPOINT=?,MIDDLESTART=?,OPTION=?,AUTOFIT=?,TRACING=?,WIDTH=?,HEIGHT=?,CORNERLEN=?,CORNERANGLE=?,ENABLED=? ");
@@ -32,8 +32,9 @@ DecodeControl::DecodeControl()
     query_seamifo += "seaminfo";
     query_seamifo += "(seamname,motorPoss,motorPose,motorAngle1s,motorAngle2s,";
     query_seamifo += "motorAngle1e,motorAngle2e,";
-    query_seamifo += "motor1speed,motor2speed,motor3speed,cadid,orderid";
-    query_seamifo += ") values(:seamname,:motorPoss,:motorPose,:motorAngle1s,:motorAngle2s,:motorAngle1e,:motorAngle2e,:motor1speed,:motor2speed,:motor3speed,:cadid,:orderid)";
+    query_seamifo += "motor1speed,motor2speed,motor3speed,cadid,orderid,enabled";
+    query_seamifo += ") values(:seamname,:motorPoss,:motorPose,:motorAngle1s,:motorAngle2s,";
+    query_seamifo +=  ":motorAngle1e,:motorAngle2e,:motor1speed,:motor2speed,:motor3speed,:cadid,:orderid,:enabled)";
 
     mapInsertQuery.insert("SEAMRELATE",query_SEAMRELATE);
     mapInsertQuery.insert("FRAMEPOS"  ,query_framepos);
@@ -102,10 +103,13 @@ bool DecodeControl::readFromLocalFd(std::string filename)
 bool DecodeControl::insert2SQL(std::string db_name)
 {
     qDebug()<<"Sqlite3:"<<db_name.c_str();
-    dbT1 = QSqlDatabase::addDatabase("QSQLITE");	//连接数据库
-    dbT1.setDatabaseName(db_name.c_str());	                        //设置数据库名称
-    dbT1.open();
+    QDateTime begin_time = QDateTime::currentDateTime();//获取系统现在的时间
+    conName = begin_time.toString("hh:mm:ss.zzz");
+    dbT1 = QSqlDatabase::addDatabase("QSQLITE",db_name.c_str());	//连接数据库
+     dbT1.setDatabaseName(db_name.c_str());	                        //设置数据库名称
+     dbT1.open();
 
+    connectName++;
     return dbT1.isValid();
 }
 
@@ -128,7 +132,7 @@ bool DecodeControl::insertProtoData()
 
     /* 异步检查并合并CAD表 */
     auto cad = std::async(std::launch::async,[this](){
-        std::lock_guard<mutex> lg(g_mtx);
+        //std::lock_guard<mutex> lg(g_mtx);
         QScopedPointer<QSqlQuery> queryP;
         queryP.reset(new QSqlQuery(dbT1));
         for(int index =0;index< root.cad_size();index++){
@@ -158,30 +162,30 @@ bool DecodeControl::insertProtoData()
     });
     cad.get();
 
-    for(int i =0;i< root.seams_size();i++){
+    queryP.reset(new QSqlQuery(dbT1));
+    for(int index =0;index< root.seams_size();index++){
 
-        progress = i * 100 / root.seams_size(); // 初始化进度数据
-
-
+        progress = index * 100 / root.seams_size(); // 初始化进度数据
 
         /* 异步焊缝信息表 */
         auto seamInfo = std::async(std::launch::async,[this](int index){
             std::lock_guard<mutex> lg(g_mtx);
-            QScopedPointer<QSqlQuery> queryP;
-            queryP.reset(new QSqlQuery(dbT1));
             queryP.data()->exec(mapGetQuery["SEAMINFO_SEAMID_MAX"]);
             while (queryP.data()->next()) {
                 new_seamid.exchange( queryP.data()->value(0).toInt() + 1);
             }
-            if(!queryP.data()->lastError().text().isEmpty())
+            if(!queryP.data()->lastError().text().isEmpty()){
                 log.push_back("获取最新的焊缝异常:" + queryP.data()->lastError().text());
+                qDebug()<< queryP.data()->lastError().text();
+            }
+
 
 
             log.push_back("最新的焊缝编号:"+QString::number(new_seamid.load()));
 
-
             queryP.data()->prepare(mapInsertQuery["SEAMINFO"]);
             std::string  seamname = root.seams(index).seamname();
+            QString cadiid = root.seams(index).cadid().empty() ? "custom" : root.seams(index).cadid().data();
             queryP.data()->bindValue( ":seamname",seamname.c_str());
             queryP.data()->bindValue( ":motorPoss",root.seams(index).machine().pos_motor_start());
             queryP.data()->bindValue( ":motorPose",root.seams(index).machine().pos_motor_stop());
@@ -192,14 +196,17 @@ bool DecodeControl::insertProtoData()
             queryP.data()->bindValue( ":motor1speed",(root.seams(index).machine().motor1speed()));
             queryP.data()->bindValue( ":motor2speed",(root.seams(index).machine().motor2speed()));
             queryP.data()->bindValue( ":motor3speed",(root.seams(index).machine().motor3speed()));
-            queryP.data()->bindValue( ":motor3speed",(root.seams(index).machine().motor3speed()));
-            queryP.data()->bindValue( ":cadid",   root.seams(index).cadid().empty() ? "custom":root.seams(index).cadid().data());
+            queryP.data()->bindValue( ":cadid",  cadiid );
             queryP.data()->bindValue( ":orderid", root.seams(index).orderindex());
+            queryP.data()->bindValue( ":enabled",root.seams(index).modify().enabled());
 
             queryP.data()->exec();
 
-            if(!queryP.data()->lastError().text().isEmpty())
+            if(!queryP.data()->lastError().text().isEmpty()){
                 log.push_back("焊缝表" + queryP.data()->lastError().text());
+                qDebug()<< queryP.data()->lastError().text();
+            }
+
 
             queryP.data()->prepare(mapUpdateQuery["SEAMINFO_MODIFY"]);
             queryP.data()->addBindValue( root.seams(index).modify().main());
@@ -218,12 +225,81 @@ bool DecodeControl::insertProtoData()
             queryP.data()->addBindValue( root.seams(index).modify().enabled());
 
             queryP.data()->exec();
-            if(!queryP.data()->lastError().text().isEmpty())
+            if(!queryP.data()->lastError().text().isEmpty()){
                 log.push_back("附加seaminfo" + queryP.data()->lastError().text());
-        },i);
+                qDebug()<< queryP.data()->lastError().text();
+            }
+        },index);
 
         seamInfo.get();     // 必须在此处阻塞以便获取最新的seamid
 
+        /* 异步更新龙骨 */
+        auto framepos = std::async(std::launch::async,[this](int index){
+            std::lock_guard<mutex> lg(g_mtx);
+//            QScopedPointer<QSqlQuery> queryP;
+//            queryP.reset(new QSqlQuery(dbT1));
+            for(int i = 0;i<root.seams(index).framepos_size();i++){
+                queryP.data()->prepare(mapInsertQuery["FRAMEPOS"]);
+                auto pos = root.seams(index).framepos(i).pos();
+                queryP.data()->bindValue(":index1",i);
+                queryP.data()->bindValue(":pos",Frame::proto2PosStr(&pos).c_str());
+                queryP.data()->bindValue(":seamid",new_seamid.load());
+                auto weld = root.seams(index).framepos(i).weld();
+                auto height = root.seams(index).framepos(i).height();
+                queryP.data()->bindValue(":weld",weld);
+                queryP.data()->bindValue(":height",height);
+                queryP.data()->bindValue(":angle1",QVariant(root.seams(index).framepos(i).angle1()));
+                queryP.data()->bindValue(":angle2",QVariant(root.seams(index).framepos(i).angle2()));
+                queryP.data()->bindValue(":angle3",QVariant(root.seams(index).framepos(i).angle3()));
+                queryP.data()->bindValue(":enabled",root.seams(index).framepos(i).enabled());
+                queryP.data()->exec();
+                if(!queryP.data()->lastError().text().isEmpty()){
+                    log.push_back("FramePos表:" + queryP.data()->lastError().text());
+                    qDebug()<< queryP.data()->lastError().text();
+                }
+
+            }
+
+        },index);
+
+        framepos.get();
+
+        /* 异步更新ScanePos */
+        auto scanepos = std::async(std::launch::async,[this](int index){
+            std::lock_guard<mutex> lg(g_mtx);
+            QScopedPointer<QSqlQuery> queryP;
+            queryP.reset(new QSqlQuery(dbT1));
+            for(int i = 0;i<root.seams(index).scanepos_size();i++){
+                queryP.data()->prepare(mapInsertQuery["SCANEPOS"]);
+                auto pos = root.seams(index).scanepos(i).pos();
+                queryP.data()->bindValue(":index1",i);
+                queryP.data()->bindValue(":pos",Frame::proto2PosStr(&pos).c_str());
+                queryP.data()->bindValue(":seamid",new_seamid.load());
+                queryP.data()->bindValue(":camera",root.seams(index).scanepos(i).camera());
+                queryP.data()->bindValue(":angle1",QVariant(root.seams(index).scanepos(i).angle1()));
+                queryP.data()->bindValue(":angle2",QVariant(root.seams(index).scanepos(i).angle2()));
+                queryP.data()->bindValue(":angle3",QVariant(root.seams(index).scanepos(i).angle3()));
+                queryP.data()->bindValue(":enabled",QVariant(root.seams(index).scanepos(i).enabled()));
+                queryP.data()->exec();
+                if(!queryP.data()->lastError().text().isEmpty()){
+                    log.push_back("ScanePos表:" + queryP.data()->lastError().text());
+                    qDebug()<< queryP.data()->lastError().text();
+                }
+
+
+
+                queryP.data()->exec(mapUpdateQuery["SCANEPOS_ENABLED"]);
+                if(!queryP.data()->lastError().text().isEmpty()){
+                    log.push_back("ScanePos表:设置enabled失败!\n" + queryP.data()->lastError().text());
+                    qDebug()<< queryP.data()->lastError().text();
+                }
+
+            }
+
+
+        },index);
+
+        scanepos.get();
 
         /* 异步更新关联关系表 */
         auto relate = std::async(std::launch::async,[this](int index){
@@ -239,11 +315,15 @@ bool DecodeControl::insertProtoData()
             queryP.data()->bindValue( ":spacing2",root.seams(index).relate().spacing2());
             queryP.data()->bindValue( ":distance2",root.seams(index).relate().distance2());
             queryP.data()->bindValue( ":seamid",new_seamid.load());
+            queryP.data()->bindValue( ":seflag",root.seams(index).relate().seflag());
 
             queryP.data()->exec();
-            if(!queryP.data()->lastError().text().isEmpty())
-            log.push_back("关联关系表" + queryP.data()->lastError().text());
-        },i);
+            if(!queryP.data()->lastError().text().isEmpty()){
+                log.push_back("关联关系表" + queryP.data()->lastError().text());
+                qDebug()<< queryP.data()->lastError().text();
+            }
+
+        },index);
         relate.get();
 
 
@@ -264,66 +344,38 @@ bool DecodeControl::insertProtoData()
             queryP.data()->bindValue( ":axis_x",root.seams(index).weldpara().axis_x());
             queryP.data()->bindValue( ":axis_y",root.seams(index).weldpara().axis_y());
             queryP.data()->exec();
-            if(!queryP.data()->lastError().text().isEmpty())
-            log.push_back("WELDPARAMS:" + queryP.data()->lastError().text());
-        },i);
+            if(!queryP.data()->lastError().text().isEmpty()){
+                log.push_back("WELDPARAMS:" + queryP.data()->lastError().text());
+                qDebug()<< queryP.data()->lastError().text();
+            }
+
+        },index);
         weldPara.get();
 
         /* 异步焊缝焊接信息表 */
-        QScopedPointer<QSqlQuery> queryP;
-        queryP.reset(new QSqlQuery(dbT1));
-        queryP.data()->prepare(mapInsertQuery["SEAMWELDINFOS"]);
-        queryP.data()->bindValue( ":seamid",new_seamid.load());
-        queryP.data()->bindValue( ":weldorder",root.seams(index).weldinfo().weldorder());
-        auto pp = root.seams(index).weldinfo().offset();
-        auto ppb = root.seams(index).weldinfo().baseoffset();
-        queryP.data()->bindValue( ":offset",Frame::proto2PosStr(&pp).c_str());
-        queryP.data()->bindValue( ":baseoffset",Frame::proto2PosStr(&pp).c_str());
-        queryP.data()->bindValue( ":s_w",root.seams(index).weldinfo().weldorder());
-        queryP.data()->exec();
-        if(!queryP.data()->lastError().text().isEmpty())
-        log.push_back("SEAMWELDINFOS:" + queryP.data()->lastError().text());
-
-        /* 更新龙骨 */
-        for(int i = 0;i<root.seams(index).framepos_size();i++){
-            queryP.data()->prepare(mapInsertQuery["FRAMEPOS"]);
-            auto pos = root.seams(index).framepos(i).pos();
-            queryP.data()->bindValue(":index1",i);
-            queryP.data()->bindValue(":pos",Frame::proto2PosStr(&pos).c_str());
-            queryP.data()->bindValue(":seamid",new_seamid.load());
-            auto weld = root.seams(index).framepos(i).weld();
-            auto height = root.seams(index).framepos(i).height();
-            queryP.data()->bindValue(":weld",weld);
-            queryP.data()->bindValue(":height",height);
-            queryP.data()->bindValue(":angle1",Frame::F_double(root.seams(index).framepos(i).angle1()));
-            queryP.data()->bindValue(":angle2",Frame::F_double(root.seams(index).framepos(i).angle2()));
-            queryP.data()->bindValue(":angle3",Frame::F_double(root.seams(index).framepos(i).angle3()));
-            queryP.data()->bindValue(":enabled",Frame::F_double(root.seams(index).framepos(i).enabled()));
+        auto weldInfo = std::async(std::launch::deferred,[this](int index){
+            std::lock_guard<mutex> lg(g_mtx);
+            QScopedPointer<QSqlQuery> queryP;
+            queryP.reset(new QSqlQuery(dbT1));
+            queryP.data()->prepare(mapInsertQuery["SEAMWELDINFOS"]);
+            queryP.data()->bindValue( ":seamid",new_seamid.load());
+            queryP.data()->bindValue( ":weldorder",root.seams(index).weldinfo().weldorder());
+            auto pp = root.seams(index).weldinfo().offset();
+            auto ppb = root.seams(index).weldinfo().baseoffset();
+            queryP.data()->bindValue( ":offset",Frame::proto2PosStr(&pp).c_str());
+            queryP.data()->bindValue( ":baseoffset",Frame::proto2PosStr(&pp).c_str());
+            queryP.data()->bindValue( ":s_w",root.seams(index).weldinfo().weldorder());
             queryP.data()->exec();
-            if(!queryP.data()->lastError().text().isEmpty())
-            log.push_back("FramePos表:" + queryP.data()->lastError().text());
-        }
+            if(!queryP.data()->lastError().text().isEmpty()){
+                log.push_back("SEAMWELDINFOS:" + queryP.data()->lastError().text());
+                qDebug()<< queryP.data()->lastError().text();
+            }
 
-        framepos.get();
-
-        /* 异步更新ScanePos */
-        for(int i = 0;i<root.seams(index).scanepos_size();i++){
-            queryP.data()->prepare(mapInsertQuery["SCANEPOS"]);
-            auto pos = root.seams(index).scanepos(i).pos();
-            queryP.data()->bindValue(":index1",i);
-            queryP.data()->bindValue(":pos",Frame::proto2PosStr(&pos).c_str());
-            queryP.data()->bindValue(":seamid",new_seamid.load());
-            queryP.data()->bindValue(":camera",root.seams(index).scanepos(i).camera());
-            queryP.data()->exec();
-            if(!queryP.data()->lastError().text().isEmpty())
-                log.push_back("ScanePos表:" + queryP.data()->lastError().text());
-
-//                queryP.data()->exec(mapUpdateQuery["SCANEPOS_ENABLED"]);
-//                if(!queryP.data()->lastError().text().isEmpty())
-//                log.push_back("ScanePos表:设置enabled失败!\n" + queryP.data()->lastError().text());
-        }
+        },index);
+        weldInfo.get();
 
     }
+
 
     auto edg = dbT1.commit(); //开启事务
     log.push_back(edg ? "数据库事务处理成功!" : "数据库事务处理失败!");
@@ -337,6 +389,7 @@ bool DecodeControl::insertProtoData()
 void DecodeControl::closeDB()
 {
     dbT1.close();
+    QSqlDatabase::removeDatabase(conName);
 }
 
 

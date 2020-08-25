@@ -7,7 +7,7 @@
 #include <fstream>
 #include <strings.h>
 #include <math.h>
-
+#include <sstream>
 
 
 
@@ -32,7 +32,51 @@ struct Pos{
     double   a  = 0;
     double   b = 0;
     double   c = 0;
+
+
+    Pos instance(string str)
+    {
+        Pos p = {0,0,0,0,0,0};
+        if(str == "")
+            return p;
+        char split[3] = {',',' ','\t'};
+        std::vector<double> ds;
+        for(int i=0;i<3;i++)
+        {
+            ds.resize(0);
+            ds.clear();
+            stringstream ss(str);
+            while(ss.good())
+            {
+                string substr;
+                getline( ss, substr,split[i]);
+                stringstream sd(substr);
+                double di;
+                sd>>di;
+                ds.push_back(di);
+            }
+            if(ds.size() >= 6)
+                break;
+        }
+        if(ds.size() < 6)
+            return p;
+        p.x = ds[0];
+        p.y = ds[1];
+        p.z = ds[2];
+        p.a = ds[3];
+        p.b = ds[4];
+        p.c = ds[5];
+        return p;
+    }
+
+    std::string toStr(char sep=','){
+        char buf[64];
+        ::memset(buf,0,64);
+        ::sprintf(buf,"%.3f%c%.3f%c%.3f%c%.3f%c%.3f%c%.3f",x,sep,y,sep,z,sep,a,sep,b,sep,c);
+        return std::string(buf);
+    }
 };
+
 
 // 一个龙骨数据
 struct AFramePos{
@@ -57,6 +101,10 @@ struct AScanePos{
     int index1      = -1;          //区分顺序
     int camera   = 0;      // 焊接方式（默认为1）
     int enabled = 1;         // 是否需要焊接
+
+    double angle1 = 0.0;
+    double angle2 = 0.0;
+    double angle3 = 0.0;
 };
 
 // 一个CAD信息

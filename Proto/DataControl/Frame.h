@@ -23,8 +23,6 @@ class Frame
 public:
     Frame();
     ~Frame();
-    static std::string N_double(double a);
-    static double F_double(double a);
 
     static std::string proto2PosStr(frame::Pos *p);
 
