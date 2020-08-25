@@ -1,0 +1,311 @@
+GParameter
+{
+    CadName customDown
+}
+
+cposa
+{
+    x -1335.645
+    y 866.096
+    z 331.092
+    a 165.043
+    b 0.766
+    c 54.585
+}
+
+cposb
+{
+    x -1409.988
+    y 225.451
+    z -80.719
+    a 82.991
+    b 90.332
+    c -161.213
+}
+
+TInF
+{
+    x -3.1
+    y 80.6
+    z 469.4
+    a 90.369
+    b 16.022
+    c -178.034
+}
+
+CInF
+{
+    x 0.217
+    y 118.413
+    z 557.372
+    a 90.369
+    b 16.022
+    c -178.034
+}
+
+CInT
+{
+    x -32.821966863560711
+    y 5.3409822223551373
+    z 1.4758157861532235
+    a 0
+    b 0
+    c 0
+}
+
+posW1
+{
+    x -62
+    y 2017.5
+    z 551
+    a 0
+    b 180
+    c -29.46
+}
+
+posW2
+{
+    x -1361.518
+    y 837.863
+    z 600.813
+    a -35.531
+    b 177.362
+    c 39.141
+}
+
+parameterAgl
+{
+    aglWeld 7.5
+    aglInclude 15
+    aglEnd 30
+    aglHead 0
+}
+
+
+Seek_Relation
+{
+    state1
+    {
+        relation1
+        {
+            seam1 2
+            seam2 end
+        }
+        relation2
+        {
+            seam1 end
+        }
+    }
+
+    state2
+    {
+        relation1
+        {
+            seam1 end
+        }
+    }
+}
+
+Track_Relation
+{
+    state1
+    {
+        relation1
+        {
+            seam1 0
+            seam2 1
+            seam3 end
+        }
+        relation2
+        {
+            seam1 end
+        }
+    }
+
+    state2
+    {
+        relation1
+        {
+            seam1 end
+        }
+    }
+}
+
+
+0
+{
+    Xnum 20
+    robotX1 -600
+    robotX2 -900
+    Ynum 1
+    robotY1 0
+    robotY2 0
+    Znum 1
+    robotZ1 0
+    robotZ2 0
+    rotateNum  1
+    rotatePhase1 -180
+    rotatePhase2 180
+    flipNum 1
+    flipPhase1 -30
+    flipPhase2 -30
+
+    VXnum 1
+    VX1 0
+    VX2 0
+    VYnum 1
+    VY1 0
+    VY2 0
+    VZnum 1
+    VZ1 0
+    VZ2 0
+    rotateVNum  1
+    rotateV1 0.4
+    rotateV2 0.6
+    flipVNum 1
+    flipV1 0
+    flipV2 0
+
+    pathDirection 1
+    laserDirection 1
+    rotateYEnd 0
+    rotateYHead 0
+    seamName seam1_1_0
+    orderID 1
+    rank 3
+    Tracing 1
+    splitNum 129
+    rttDir 1
+}
+
+1
+{
+    Xnum 1
+    robotX1 -600
+    robotX2 -600
+    Ynum 1
+    robotY1 0
+    robotY2 0
+    Znum 1
+    robotZ1 0
+    robotZ2 0
+    rotateNum  144
+    rotatePhase1 -180
+    rotatePhase2 180
+    flipNum 1
+    flipPhase1 -42
+    flipPhase2 -42
+
+    VXnum 1
+    VX1 0
+    VX2 0
+    VYnum 1
+    VY1 0
+    VY2 0
+    VZnum 1
+    VZ1 0
+    VZ2 0
+    rotateVNum  20
+    rotateV1 0.4
+    rotateV2 0.6
+    flipVNum 1
+    flipV1 0
+    flipV2 0
+
+    pathDirection 1
+    laserDirection 0
+    rotateYEnd 0
+    rotateYHead 0
+    seamName seam2_1_0
+    orderID 2
+    rank 0
+    Tracing 0
+}
+
+2
+{
+    Xnum 40
+    robotX1 200
+    robotX2 -800
+    Ynum 1
+    robotY1 0
+    robotY2 0
+    Znum 1
+    robotZ1 0
+    robotZ2 0
+    rotateNum  144
+    rotatePhase1 -180
+    rotatePhase2 180
+    flipNum 1
+    flipPhase1 0
+    flipPhase2 0
+
+    VXnum 1
+    VX1 0
+    VX2 0
+    VYnum 1
+    VY1 0
+    VY2 0
+    VZnum 1
+    VZ1 0
+    VZ2 0
+    rotateVNum  144
+    rotateV1 123
+    rotateV2 123
+    flipVNum 1
+    flipV1 -42
+    flipV2 -42
+
+    pathDirection 0
+    laserDirection 0
+    rotateYEnd 0
+    rotateYHead 0
+    seamName seam3_1_0
+    orderID 5
+    rank 0
+    Tracing 0
+}
+
+3
+{
+    Xnum 40
+    robotX1 200
+    robotX2 -900
+    Ynum 1
+    robotY1 0
+    robotY2 0
+    Znum 1
+    robotZ1 0
+    robotZ2 0
+    rotateNum  144
+    rotatePhase1 -180
+    rotatePhase2 180
+    flipNum 1
+    flipPhase1 0
+    flipPhase2 0
+
+    VXnum 1
+    VX1 0
+    VX2 0
+    VYnum 1
+    VY1 0
+    VY2 0
+    VZnum 1
+    VZ1 0
+    VZ2 0
+    rotateVNum  144
+    rotateV1 123
+    rotateV2 123
+    flipVNum 1
+    flipV1 -42
+    flipV2 -42
+
+    pathDirection 0
+    laserDirection 1
+    rotateYEnd 0
+    rotateYHead 0
+    seamName seam4_1_0
+    orderID 5
+    rank 0
+    Tracing 0
+}

@@ -1,0 +1,21 @@
+welder
+{
+    elec 200
+    note test
+    voltage 5
+    endElec 180
+    endVoltage 5
+    stickWireElec 100
+    stickWireVoltage 0
+    endSleep 2
+    beginElec 200
+    beginVoltage 5
+    preSendGas 0.5
+    delaySendGas 0.5
+    checkWelding false
+    checkWelder false
+    checkHit true
+    stickWireTime 0.5
+    beginSleep 0.10000000000000001
+    workModel 0
+}

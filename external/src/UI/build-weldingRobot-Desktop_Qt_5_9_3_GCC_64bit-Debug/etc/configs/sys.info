@@ -1,0 +1,9 @@
+angleSpeed 1.8
+fit
+{
+    PrePoints 15
+    p2p_len 5
+    partlen 50
+    pick 20
+    Hlimit 18
+}

@@ -1,0 +1,88 @@
+2020-04-24 13:56:30: [Critical]: Connection failed:  Input/output error 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 75
+2020-04-24 13:56:30: [Critical]: unknown exception. 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 84
+2020-04-24 14:02:51: [Critical]: Connection failed:  Input/output error 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 75
+2020-04-24 14:02:51: [Critical]: unknown exception. 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 84
+2020-04-24 17:13:27: [Critical]: Connection failed:  Input/output error 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 75
+2020-04-24 17:13:27: [Critical]: unknown exception. 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 84
+2020-04-24 17:51:21: [Critical]: Connection failed:  Input/output error 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 75
+2020-04-24 17:51:21: [Critical]: unknown exception. 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 84
+2020-04-24 17:53:11: [Critical]: Connection failed:  Input/output error 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 75
+2020-04-24 17:53:11: [Critical]: unknown exception. 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 84
+2020-04-24 17:56:23: [Critical]: Connection failed:  Input/output error 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 75
+2020-04-24 17:56:23: [Critical]: unknown exception. 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 84
+2020-04-24 17:57:00: [Critical]: Connection failed:  Input/output error 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 75
+2020-04-24 17:57:00: [Critical]: unknown exception. 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 84
+2020-04-24 17:57:57: [Critical]: Connection failed:  Input/output error 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 75
+2020-04-24 17:57:57: [Critical]: unknown exception. 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 84
+2020-04-24 17:58:57: [Critical]: Connection failed:  Input/output error 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 75
+2020-04-24 17:58:57: [Critical]: unknown exception. 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 84
+2020-04-24 17:59:35: [Critical]: Connection failed:  Input/output error 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 75
+2020-04-24 17:59:35: [Critical]: unknown exception. 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 84
+2020-04-24 18:05:42: [Critical]: Connection failed:  Input/output error 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 75
+2020-04-24 18:05:42: [Critical]: unknown exception. 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 84
+2020-04-24 18:07:11: [Critical]: Connection failed:  Input/output error 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 75
+2020-04-24 18:07:11: [Critical]: unknown exception. 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 84
+2020-04-24 18:09:42: [Critical]: Connection failed:  Input/output error 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 75
+2020-04-24 18:09:42: [Critical]: unknown exception. 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 84
+2020-04-24 18:10:37: [Critical]: Connection failed:  Input/output error 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 75
+2020-04-24 18:10:37: [Critical]: unknown exception. 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 84
+2020-04-24 18:11:31: [Critical]: Connection failed:  Input/output error 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 75
+2020-04-24 18:11:31: [Critical]: unknown exception. 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 84
+2020-04-24 18:11:58: [Critical]: Connection failed:  Input/output error 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 75
+2020-04-24 18:11:58: [Critical]: unknown exception. 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 84
+2020-04-24 18:17:59: [Critical]: Connection failed:  Input/output error 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 75
+2020-04-24 18:17:59: [Critical]: unknown exception. 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 84
+2020-04-24 18:19:00: [Critical]: Connection failed:  Input/output error 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 75
+2020-04-24 18:19:00: [Critical]: unknown exception. 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 84
+2020-04-24 18:20:27: [Critical]: Connection failed:  Input/output error 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 75
+2020-04-24 18:20:27: [Critical]: unknown exception. 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 84
+2020-04-24 18:31:17: [Critical]: Connection failed:  Input/output error 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 75
+2020-04-24 18:31:17: [Critical]: unknown exception. 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 84
+2020-04-24 18:32:38: [Critical]: Connection failed:  Input/output error 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 75
+2020-04-24 18:32:38: [Critical]: unknown exception. 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 84
+2020-04-24 18:35:18: [Critical]: Connection failed:  Input/output error 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 75
+2020-04-24 18:35:18: [Critical]: unknown exception. 
+ Function: void mbControl::connectDevice() Line: ../weldingRobot/modbusControl/mbControl.cpp File: 84

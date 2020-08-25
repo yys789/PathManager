@@ -1,0 +1,173 @@
+GParameter
+{
+    CadName RS600S10_UP
+}
+
+cposa
+{
+    x -1560.7
+    y 794.1
+    z -165.5
+    a 90.6
+    b 17.2
+    c -77.1
+}
+
+cposb
+{
+    x -1222.6
+    y 731.5
+    z -376.8
+    a 179.3
+    b 90.1
+    c -117.9
+}
+
+TInF
+{
+    x 4.1
+    y 123.4
+    z 619.3
+    a 91.2
+    b 27.3
+    c 179.8
+}
+
+CInF
+{
+    x -1.6
+    y 177.4
+    z 672.0
+    a 91.2
+    b 27.3
+    c 179.8
+}
+
+CInT
+{
+    x -58.5
+    y -4.9
+    z 3.7
+    a 0
+    b 0
+    c 0
+}
+
+posW1
+{
+    x -1707
+    y 1907
+    z 30
+    a 0
+    b 0
+    c 0
+}
+
+posW2
+{
+    x -1560.7
+    y 794.1
+    z -165.5
+    a 90.6
+    b 17.2
+    c -77.1
+}
+
+parameterAgl
+{
+    aglWeld 10
+    aglA 0
+    aglT 0
+    aglInclude 15
+    aglEnd 30
+    aglHead -30
+    offsetAgl 20
+    backDistance 100
+    backPosNum 5
+}
+
+
+
+Seek_Relation
+{
+    state1
+    {
+        relation1
+        {
+            seam1 end
+        }
+    }
+}
+
+Track_Relation
+{
+    state1
+    {
+        relation1
+        {
+            seam1 0
+            seam2 end
+        }
+        relation2
+        {
+            seam1 end
+        }
+    }
+
+    state2
+    {
+        relation1
+        {
+            seam1 end
+        }
+    }
+}
+
+
+
+0
+{
+    Xnum 10
+    robotX1 0
+    robotX2 -800
+    Ynum 1
+    robotY1 0
+    robotY2 0
+    Znum 1
+    robotZ1 0
+    robotZ2 0
+    rotateNum 1
+    rotatePhase1 -180
+    rotatePhase2 180
+    flipNum 1
+    flipPhase1 40
+    flipPhase2 40
+
+    VXnum 1
+    VX1 0
+    VX2 0
+    VYnum 1
+    VY1 0
+    VY2 0
+    VZnum 1
+    VZ1 0
+    VZ2 0
+    rotateVNum  1
+    rotateV1 0
+    rotateV2 0
+    flipVNum 1
+    flipV1 0
+    flipV2 0
+
+    pathDirection 0
+    laserDirection 1
+    rotateYEnd 0
+    rotateYHead 0
+    seamName seam1_1_0
+    orderID 1
+    rank 1
+    Tracing 1
+    rttDir 1
+    splitNumS 0
+    splitNumE 95
+}

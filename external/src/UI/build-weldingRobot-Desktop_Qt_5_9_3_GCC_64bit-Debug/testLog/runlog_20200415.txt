@@ -1,0 +1,1 @@
+2020-04-15 14:29:50: [Warning]: QMetaObject::connectSlotsByName: No matching signal for on_send_clicked() Function:  Line:  File: 0

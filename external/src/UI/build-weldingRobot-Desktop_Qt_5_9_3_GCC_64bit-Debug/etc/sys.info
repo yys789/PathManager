@@ -1,0 +1,163 @@
+autoCheck 1
+weldTest 1
+saveImageLevel 1
+imageLevel 1
+FullScreen 1
+weldingCounts 2
+checkTime 300
+homeShift -9
+writeLog 0
+brightnessRated 50
+bWelding 0
+s_v 0.00002
+dh_compensate 0
+fit
+{
+    PrePoints 15
+    p2p_len 5
+    partlen 50
+    pick 20
+    Hlimit 18
+    PATHDIS 30
+    end_err_limit 10
+    endKeelIndex 10
+    gap 30
+    endlen 10
+    c2tx 33
+    fitps 4
+}
+Passwd
+{
+    show 0
+    user0 ""
+    user1 ""
+    user2 ""
+}
+welder
+{
+    workMode 1
+    recvStick 0
+    electricity 150
+    voltage -4
+    weldingOpen 0
+    detectGas 0
+    sendStick 0
+    connectType 1
+}
+robot
+{
+    port 10000
+    speed 300
+    acc 80
+    angleSpeed 30
+    angleAcc 30
+    bEular true
+    bTransTCP true
+    currentTCP 0
+    steadyTime 2000
+    lowSpeed 30
+    highSpeed 60
+    scanSpeed 20
+    tracingScan 10
+    axleSpeed 30
+    axleAcc 30
+    currentRSITCP 2
+    weldingSpeed 80
+    IPAddr 192.168.1.100
+    multipleSpeed 1
+    maxSpeed 20
+    moveSpeed 300
+    eulerType 323
+    simulateSpeed 50
+}
+camera
+{
+    exposure 1500
+    gain 0
+    roi_offset_x 0
+    roi_offset_y 0
+    roi_width 720
+    roi_height 540
+}
+calibration
+{
+    speed 10
+    lowSpeed 10
+    highSpeed 10
+    lastPos
+    {
+        x 970.11026689035521
+        y 75.133846334496837
+        z 428.77465567432063
+        a 131.96000000000001
+        b 13.42
+        c -156.06
+    }
+    useOldPrepare false
+    useOldCalibrationData false
+}
+RSIWeldingPos
+{
+    x 192.495
+    y 1140.22
+    z 504.184
+    a -96.4073
+    b -30.2323
+    c 142.774
+}
+RSIFlangePos
+{
+    x 465.619
+    y 869.066
+    z 603.110
+    a -136.811
+    b -7.7545
+    c 104.041
+}
+RSIWelding2Flange
+{
+    0 0.71984719967958122
+    1 0.26200778106885508
+    2 -0.64278451426029248
+    3 256.28728654956006
+    4 0.35208102297149091
+    5 0.66024178379861143
+    6 0.66341520949536292
+    7 -261.29975406031639
+    8 0.59821314126054914
+    9 -0.70386981011107619
+    10 0.38302523159366897
+    11 -154.74763277375791
+    12 0
+    13 0
+    14 0
+    15 1
+}
+motor
+{
+    serialPort /dev/ttyS1
+    baudRate 9600
+    speed 10000
+    　　motor2steps 11100
+    motor3steps 12100
+    totalSteps 383500
+}
+lightSensor
+{
+    serialPort /dev/ttyUSB1
+    baudRate 19200
+}
+laser
+{
+    serialPort /dev/ttyS0
+    baudRate 19200
+    triggerTime 110
+    brightness 50
+    intervalTime 20
+    control PLC
+}
+startSeam origin
+origin
+{
+    wtSeamsList ""
+}

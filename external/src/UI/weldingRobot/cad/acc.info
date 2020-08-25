@@ -1,0 +1,68 @@
+SeamList "seam1 seam2"
+startSeam origin
+seam1
+{
+    wtSeamsList ""
+    seamType w
+    departLen 100
+    rank 2
+    width 6
+    height 6
+    midPoint midPoint_r_up
+    positioner
+    {
+        angle 28
+        height 0
+        corner_angle 0
+        corner_len 0
+    }
+    middleStart 0
+    related_seam0
+    {
+        seamName none
+        spacing 0
+        distance 0
+    }
+    related_seam1
+    {
+        seamName none
+        spacing 0
+        distance 0
+    }
+    weldCounts 1
+    scanPosCount 3
+    option 00000000
+    offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    weldingArg1
+    {
+        S_W 0
+        I_W 0
+        V_W 0
+        t_end 0
+        I_end 0
+        V_end 0
+        range 0
+        frequency 0
+        serialNumber 0
+        autoFit 0
+    }
+}

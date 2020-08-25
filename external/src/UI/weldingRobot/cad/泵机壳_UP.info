@@ -1,0 +1,3181 @@
+SeamList "seam1_01 seam1_02 seam1_03 seam1_04 seam1_05 seam1_06 seam1_07 seam1_08 seam1_09 seam1_10 seam1_11 seam1_12 seam2_01 seam2_02 seam2_03 seam2_04 seam2_05 seam2_06 seam2_07_1 seam2_07_2 seam2_08 seam2_10 seam2_11 seam3_01 seam3_02 seam3_03 seam3_04 seam3_05 seam3_07 seam4_01 seam4_02"
+startSeam origin
+midPoint_a
+{
+    x -168.99100000000001
+    y 97.590000000000003
+    z 592.18799999999999
+    a 10.945
+    b 170.70199999999994
+    c 24.255999999999997
+    tcp 2
+    a1 -76.466999999999999
+    a2 -51.962000000000003
+    a3 -104.816
+    a4 -4.5890000000000004
+    a5 -122.617
+    a6 -35.368000000000002
+}
+midPoint_r_up
+{
+    x -30.884009918547008
+    y 929.94442656489537
+    z 354.875
+    a 141.75443513441232
+    b 160.14700000000002
+    c -173.50700000000001
+    tcp 2
+    a1 16.717564865587697
+    a2 -14.343999999999999
+    a3 -117.806
+    a4 34.024999999999999
+    a5 -66.510999999999996
+    a6 -105.447
+}
+midPoint_m_up
+{
+    x -1133.9069999999999
+    y 520.44899999999996
+    z 655.16200000000003
+    a 158.10900000000001
+    b 155.26599999999999
+    c -172.44
+    tcp 2
+    a1 -65.739000000000004
+    a2 -1.766
+    a3 -83.540000000000006
+    a4 -0.60099999999999998
+    a5 -60.817999999999998
+    a6 -27.452000000000002
+}
+midPoint_l_up
+{
+    x -685.13499999999999
+    y -415.75900000000001
+    z 344.197
+    a 170.50399999999999
+    b 154.03800000000001
+    c 176.25399999999999
+    tcp 2
+    a1 -154.11099999999999
+    a2 -39.081000000000003
+    a3 -137.279
+    a4 -38.814999999999998
+    a5 -72.641999999999996
+    a6 46.564999999999998
+}
+seam1_01
+{
+    midPoint midPoint_r_up
+    departLen 100
+    rank 3
+    scanPosCount 5
+    scanPos0
+    {
+        x -340.59899999999999
+        y 255.364
+        z 24.626999999999999
+        a -144.357
+        b 109.068
+        c -71.593999999999994
+        tcp 2
+    }
+    scanPos2
+    {
+        x -449.959
+        y 655.072
+        z 23.794
+        a -176.51599999999999
+        b 111.669
+        c -100.122
+        tcp 2
+    }
+    scanPos4
+    {
+        x -733.09000000000003
+        y 933.02999999999997
+        z 22.013000000000002
+        a -156.71100000000001
+        b 110.08199999999999
+        c -94.655000000000001
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName seam1_02
+        spacing 0
+        distance 6
+    }
+    related_seam1
+    {
+        seamName seam1_04
+        spacing 0
+        distance 6
+    }
+    seamType w
+    offset1
+    {
+        x 0
+        y -0.5
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 0
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 25
+        I_W 160
+        V_W 18
+        t_end 1
+        I_end 120
+        V_end 14
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+    scanPos1
+    {
+        x -368.077
+        y 443.15499999999997
+        z 24.821000000000002
+        a -167.34700000000001
+        b 108.268
+        c -90.153999999999996
+        tcp 2
+    }
+    scanPos3
+    {
+        x -570.27099999999996
+        y 811.846
+        z 22.513999999999999
+        a -164.91800000000001
+        b 109.039
+        c -102.004
+        tcp 2
+    }
+    wtSeamsList ""
+    weldCounts 1
+}
+seam1_02
+{
+    midPoint midPoint_r_up
+    departLen 50
+    rank 1
+    scanPosCount 2
+    scanPos0
+    {
+        x -722.33799999999997
+        y 933.93200000000002
+        z -36.835999999999999
+        a -170.77000000000001
+        b 117.15600000000001
+        c 6.25
+        tcp 2
+    }
+    scanPos1
+    {
+        x -723.66899999999998
+        y 933.27599999999995
+        z -89.891000000000005
+        a -170.77500000000001
+        b 117.16200000000001
+        c -3.7789999999999999
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName seam1_03
+        spacing -30
+        distance 0
+    }
+    related_seam1
+    {
+        seamName none
+        spacing 70
+        distance 0
+    }
+    seamType v
+    offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 0
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 50
+        I_W 240
+        V_W 26
+        t_end 0
+        I_end 0
+        V_end 0
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+    wtSeamsList ""
+    weldCounts 1
+}
+seam1_03
+{
+    midPoint midPoint_r_up
+    middleStart 1
+    rank 3
+    departLen 50
+    scanPosCount 5
+    scanPos0
+    {
+        x -336.90600000000001
+        y 256.18000000000001
+        z -120.672
+        a -136.49199999999999
+        b 127.86
+        c -67.772999999999996
+        tcp 2
+    }
+    scanPos1
+    {
+        x -365.31599999999997
+        y 452.06599999999997
+        z -121.18000000000001
+        a -161.928
+        b 130.43600000000001
+        c -85.590999999999994
+        tcp 2
+    }
+    scanPos4
+    {
+        x -720.95899999999995
+        y 930.78399999999999
+        z -123.72199999999999
+        a -175.07499999999999
+        b 124.619
+        c -105.523
+        tcp 2
+    }
+    scanPos2
+    {
+        x -449.77699999999999
+        y 664.95799999999997
+        z -122.191
+        a 179.16200000000001
+        b 127.623
+        c -99.715999999999994
+        tcp 2
+    }
+    scanPos3
+    {
+        x -587.94899999999996
+        y 836.30399999999997
+        z -122.512
+        a -171.02600000000001
+        b 126.733
+        c -99.748999999999995
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName seam1_02
+        spacing 5
+        distance 0
+    }
+    related_seam1
+    {
+        seamName seam1_04
+        spacing 0
+        distance 0
+    }
+    seamType v
+    offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 0
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 30
+        I_W 240
+        V_W 26
+        t_end 0
+        I_end 0
+        V_end 0
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+    wtSeamsList ""
+    weldCounts 1
+}
+seam1_04
+{
+    midPoint midPoint_r_up
+    departLen 50
+    rank 1
+    scanPosCount 2
+    scanPos0
+    {
+        x -333.37299999999999
+        y 241.91999999999999
+        z 9.2010000000000005
+        a -123.321
+        b 127.503
+        c -3.0270000000000001
+        tcp 2
+    }
+    scanPos1
+    {
+        x -335.56700000000001
+        y 241.34899999999999
+        z -104.41800000000001
+        a -123.327
+        b 127.499
+        c -3.0619999999999998
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName seam1_05
+        spacing -6
+        distance 6
+    }
+    related_seam1
+    {
+        seamName seam1_03
+        spacing 0
+        distance 0
+    }
+    seamType v
+    offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 0
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 50
+        I_W 240
+        V_W 26
+        t_end 0
+        I_end 0
+        V_end 0
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+    wtSeamsList ""
+    weldCounts 1
+}
+seam1_05
+{
+    midPoint midPoint_r_up
+    departLen 50
+    rank 1
+    scanPosCount 2
+    scanPos0
+    {
+        x -346.21699999999998
+        y 238.75299999999999
+        z 31.454999999999998
+        a -120.248
+        b 129.68700000000001
+        c -128.33000000000001
+        tcp 2
+    }
+    scanPos1
+    {
+        x -589.52499999999998
+        y 204.74700000000001
+        z 34.780999999999999
+        a -120.256
+        b 129.67599999999999
+        c -128.27600000000001
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName seam1_04
+        spacing -6
+        distance 6
+    }
+    related_seam1
+    {
+        seamName none
+        spacing 270
+        distance 0
+    }
+    seamType v
+    offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 0
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 30
+        I_W 240
+        V_W 26
+        t_end 0
+        I_end 0
+        V_end 0
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+    wtSeamsList ""
+    weldCounts 1
+}
+seam1_06
+{
+    midPoint midPoint_r_up
+    departLen 50
+    scanPosCount 3
+    scanPos0
+    {
+        x -718.16499999999996
+        y 579.08100000000002
+        z 30.712
+        a -172.05799999999999
+        b 125.977
+        c -101.92
+        tcp 2
+    }
+    scanPos1
+    {
+        x -761.39400000000001
+        y 701.40899999999999
+        z 28.728999999999999
+        a -174.346
+        b 125.101
+        c -93.081999999999994
+        tcp 2
+    }
+    scanPos2
+    {
+        x -832.18700000000001
+        y 787.69899999999996
+        z 26.879000000000001
+        a -177.06100000000001
+        b 127.371
+        c -100.03700000000001
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName seam1_07
+        spacing 5
+        distance 0
+    }
+    related_seam1
+    {
+        seamName none
+        spacing 0
+        distance 0
+    }
+    seamType v
+    offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 0
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 30
+        I_W 240
+        V_W 26
+        t_end 0
+        I_end 0
+        V_end 0
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+    wtSeamsList ""
+    rank 2
+    weldCounts 1
+}
+seam1_07
+{
+    midPoint midPoint_r_up
+    departLen 50
+    rank 1
+    scanPosCount 2
+    scanPos0
+    {
+        x -755.86699999999996
+        y 890.94600000000003
+        z 27.247
+        a -176.66
+        b 128.709
+        c -73.507999999999996
+        tcp 2
+    }
+    scanPos1
+    {
+        x -814.50599999999997
+        y 817.27300000000002
+        z 26.952000000000002
+        a -176.673
+        b 128.71899999999999
+        c -73.519000000000005
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName seam1_08
+        spacing -30
+        distance 0
+    }
+    related_seam1
+    {
+        seamName none
+        spacing 115
+        distance 0
+    }
+    seamType v
+    offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 0
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 30
+        I_W 240
+        V_W 26
+        t_end 0
+        I_end 0
+        V_end 0
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+    wtSeamsList ""
+    weldCounts 1
+}
+seam1_08
+{
+    midPoint midPoint_r_up
+    departLen 50
+    rank 1
+    scanPos2
+    {
+        x -834.21199999999999
+        y 791.13400000000001
+        z 82.75
+        a 179.93100000000001
+        b 110.875
+        c 0.32600000000000001
+        tcp 2
+    }
+    scanPos1
+    {
+        x -832.50800000000004
+        y 791.59900000000005
+        z 188.18000000000001
+        a 179.90199999999999
+        b 104.64100000000001
+        c 0.32900000000000001
+        tcp 2
+    }
+    scanPosCount 3
+    scanPos0
+    {
+        x -832.82299999999998
+        y 791.85199999999998
+        z 337.91500000000002
+        a 179.75
+        b 81.656999999999996
+        c 0.34899999999999998
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName seam1_07
+        spacing -30
+        distance 0
+    }
+    related_seam1
+    {
+        seamName none
+        spacing 305
+        distance 0
+    }
+    seamType v
+    offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 0
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 50
+        I_W 240
+        V_W 26
+        t_end 0
+        I_end 0
+        V_end 0
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+    wtSeamsList ""
+    weldCounts 1
+}
+seam1_09
+{
+    midPoint midPoint_r_up
+    departLen 50
+    rank 1
+    scanPos2
+    {
+        x -773.04100000000005
+        y 293.54899999999998
+        z 49.104999999999997
+        a -157.77199999999999
+        b 116.399
+        c -8.4710000000000001
+        tcp 2
+    }
+    scanPos1
+    {
+        x -773.40200000000004
+        y 294.85199999999998
+        z 156.53899999999999
+        a -156.93899999999999
+        b 103.11799999999999
+        c -8.1839999999999993
+        tcp 2
+    }
+    scanPosCount 3
+    scanPos0
+    {
+        x -773.28300000000002
+        y 297.64999999999998
+        z 345.113
+        a -155.80099999999999
+        b 82.266000000000005
+        c -8.1240000000000006
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName seam1_05
+        spacing 0
+        distance -1
+    }
+    related_seam1
+    {
+        seamName none
+        spacing 320
+        distance 0
+    }
+    seamType v
+    offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 0
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 50
+        I_W 240
+        V_W 26
+        t_end 0
+        I_end 0
+        V_end 0
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+    wtSeamsList ""
+    weldCounts 1
+}
+seam1_10
+{
+    midPoint midPoint_m_up
+    departLen 50
+    scanPosCount 3
+    scanPos0
+    {
+        x -722.35599999999999
+        y 591.50800000000004
+        z 407.59800000000001
+        a 37.402999999999999
+        b 104.20699999999999
+        c 86.846999999999994
+        tcp 2
+    }
+    scanPos1
+    {
+        x -751.08799999999997
+        y 677.37
+        z 407.10599999999999
+        a 47.347999999999999
+        b 104.72
+        c 87.680000000000007
+        tcp 2
+    }
+    scanPos2
+    {
+        x -845.39400000000001
+        y 800.92100000000005
+        z 405.82799999999997
+        a 66.259
+        b 104.52800000000001
+        c 89.381
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName none
+        spacing 0
+        distance 0
+    }
+    related_seam1
+    {
+        seamName none
+        spacing 0
+        distance 0
+    }
+    seamType w
+    offset1
+    {
+        x 0
+        y 2.7999999999999998
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 0
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 22
+        I_W 200
+        V_W 21
+        t_end 1
+        I_end 130
+        V_end 15
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+    wtSeamsList ""
+    rank 2
+    weldCounts 1
+}
+seam1_11
+{
+    midPoint midPoint_m_up
+    departLen 100
+    scanPosCount 3
+    scanPos0
+    {
+        x -845.39400000000001
+        y 800.92100000000005
+        z 405.82799999999997
+        a 66.259
+        b 104.52800000000001
+        c 89.381
+        tcp 2
+    }
+    scanPos1
+    {
+        x -980.37400000000002
+        y 872.67499999999995
+        z 405.23099999999999
+        a 91.254000000000005
+        b 104.69799999999999
+        c 90.037000000000006
+        tcp 2
+    }
+    scanPos2
+    {
+        x -1135.1980000000001
+        y 881.40899999999999
+        z 405.99000000000001
+        a 118.19799999999999
+        b 101.907
+        c 90.102000000000004
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName none
+        spacing 0
+        distance 0
+    }
+    related_seam1
+    {
+        seamName none
+        spacing 0
+        distance 0
+    }
+    seamType w
+    offset1
+    {
+        x 0
+        y 3
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 0
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 22
+        I_W 200
+        V_W 21
+        t_end 1
+        I_end 130
+        V_end 15
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+    wtSeamsList ""
+    rank 2
+    weldCounts 1
+}
+seam1_12
+{
+    midPoint midPoint_m_up
+    departLen 50
+    scanPosCount 3
+    scanPos0
+    {
+        x -1097.2190000000001
+        y 155.27799999999999
+        z 413.07400000000001
+        a -108.789
+        b 102.312
+        c -90.635999999999996
+        tcp 2
+    }
+    scanPos1
+    {
+        x -1266.097
+        y 204.30699999999999
+        z 413.19900000000001
+        a -138.78999999999999
+        b 103.925
+        c -89.299999999999997
+        tcp 2
+    }
+    scanPos2
+    {
+        x -1408.2619999999999
+        y 362.42000000000002
+        z 413.28300000000002
+        a -178.375
+        b 100.563
+        c -87.016000000000005
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName none
+        spacing 0
+        distance 0
+    }
+    related_seam1
+    {
+        seamName none
+        spacing 0
+        distance 0
+    }
+    seamType w
+    offset1
+    {
+        x 0
+        y -2.5
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 0
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 22
+        I_W 200
+        V_W 21
+        t_end 1
+        I_end 130
+        V_end 15
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+    wtSeamsList ""
+    rank 2
+    weldCounts 1
+}
+seam2_01
+{
+    midPoint midPoint_m_up
+    departLen 10
+    scanPosCount 3
+    scanPos0
+    {
+        x -846.25900000000001
+        y 746.50400000000002
+        z 405.38799999999998
+        a 47.051000000000002
+        b 99.897999999999996
+        c 89.224999999999994
+        tcp 2
+    }
+    scanPos1
+    {
+        x -1129.4259999999999
+        y 960.46900000000005
+        z 404.44499999999999
+        a 90.637
+        b 104.01600000000001
+        c 90.891000000000005
+        tcp 2
+    }
+    scanPos2
+    {
+        x -1440.78
+        y 852.51999999999998
+        z 407.16399999999999
+        a 135.21299999999999
+        b 100.437
+        c 92.853999999999999
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName none
+        spacing 0
+        distance 0
+    }
+    related_seam1
+    {
+        seamName none
+        spacing 0
+        distance 0
+    }
+    seamType w
+    offset1
+    {
+        x 0
+        y 2.7000000000000002
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 72
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 22
+        I_W 200
+        V_W 21
+        t_end 1
+        I_end 130
+        V_end 15
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+    wtSeamsList ""
+    rank 2
+    weldCounts 1
+}
+seam2_02
+{
+    midPoint midPoint_m_up
+    departLen 50
+    scanPosCount 3
+    scanPos3
+    {
+        x -979.71299999999997
+        y 300.65199999999999
+        z 413.22300000000001
+        a -97.301000000000002
+        b 149.715
+        c -94.962999999999994
+        tcp 2
+    }
+    scanPos2
+    {
+        x -1220.6510000000001
+        y 235.946
+        z 414.83999999999997
+        a -114.584
+        b 101.699
+        c -78.218999999999994
+        tcp 2
+    }
+    scanPos0
+    {
+        x -1531.203
+        y 501.26999999999998
+        z 411.68299999999999
+        a -165.48599999999999
+        b 99.989999999999995
+        c -80.004999999999995
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName none
+        spacing 0
+        distance 0
+    }
+    related_seam1
+    {
+        seamName none
+        spacing 0
+        distance 0
+    }
+    seamType w
+    offset1
+    {
+        x 0
+        y -2.2999999999999998
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 72
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 22
+        I_W 200
+        V_W 21
+        t_end 1
+        I_end 130
+        V_end 15
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+    scanPos1
+    {
+        x -1402.306
+        y 308.67899999999997
+        z 413.27499999999998
+        a -137.881
+        b 102.05
+        c -79.230999999999995
+        tcp 2
+    }
+    wtSeamsList ""
+    rank 2
+    weldCounts 1
+}
+seam2_03
+{
+    midPoint midPoint_r_up
+    departLen 50
+    scanPos3
+    {
+        x -1022.954
+        y 1034.2339999999999
+        z -121.857
+        a -169.35300000000001
+        b 125.401
+        c -112.52
+        tcp 2
+    }
+    scanPos1
+    {
+        x -664.95399999999995
+        y 541.68399999999997
+        z -119.89100000000001
+        a -168.48699999999999
+        b 131.19200000000001
+        c -89.778000000000006
+        tcp 2
+    }
+    scanPosCount 4
+    scanPos0
+    {
+        x -670.96500000000003
+        y 397.423
+        z -119.28400000000001
+        a -150.46899999999999
+        b 121.767
+        c -71.793000000000006
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName seam2_04
+        spacing 5
+        distance 0
+    }
+    related_seam1
+    {
+        seamName seam2_05
+        spacing 5
+        distance 0
+    }
+    seamType v
+    offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 72
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 30
+        I_W 240
+        V_W 26
+        t_end 0
+        I_end 0
+        V_end 0
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+    scanPos2
+    {
+        x -770.44000000000005
+        y 859.46900000000005
+        z -121.203
+        a -174.58099999999999
+        b 127.029
+        c -95.811000000000007
+        tcp 2
+    }
+    wtSeamsList ""
+    rank 2
+    weldCounts 1
+}
+seam2_04
+{
+    midPoint midPoint_r_up
+    departLen 50
+    rank 1
+    scanPosCount 2
+    scanPos0
+    {
+        x -668.91999999999996
+        y 400.97000000000003
+        z -29.969000000000001
+        a -143.86799999999999
+        b 113.839
+        c -6.9809999999999999
+        tcp 2
+    }
+    scanPos1
+    {
+        x -669.09900000000005
+        y 400.65499999999997
+        z -90.188999999999993
+        a -143.86600000000001
+        b 113.842
+        c -6.984
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName seam2_03
+        spacing -30
+        distance 0
+    }
+    related_seam1
+    {
+        seamName none
+        spacing 70
+        distance 0
+    }
+    seamType v
+    offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 72
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 50
+        I_W 240
+        V_W 26
+        t_end 0
+        I_end 0
+        V_end 0
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+    wtSeamsList ""
+    weldCounts 1
+}
+seam2_05
+{
+    midPoint midPoint_r_up
+    departLen 50
+    rank 1
+    scanPos1
+    {
+        x -1025.171
+        y 1034.7439999999999
+        z -78.869
+        a -161.46600000000001
+        b 109.907
+        c -6.8479999999999999
+        tcp 2
+    }
+    scanPosCount 2
+    scanPos0
+    {
+        x -1024.4169999999999
+        y 1036.5119999999999
+        z 91.096000000000004
+        a -161.44900000000001
+        b 109.89400000000001
+        c -6.8109999999999999
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName seam2_03
+        spacing -30
+        distance 0
+    }
+    related_seam1
+    {
+        seamName none
+        spacing 205
+        distance 0
+    }
+    seamType v
+    offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 72
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 50
+        I_W 240
+        V_W 26
+        t_end 0
+        I_end 0
+        V_end 0
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+    wtSeamsList ""
+    weldCounts 1
+}
+seam2_06
+{
+    midPoint midPoint_r_up
+    departLen 50
+    scanPos4
+    {
+        x -992.20705287635644
+        y 1021.9049643370171
+        z 97.906000000000006
+        a 186.1544351344123
+        b 119.291
+        c -126.306
+        tcp 2
+    }
+    scanPos2
+    {
+        x -785.08799999999997
+        y 870.89400000000001
+        z 60.435000000000002
+        a 179.32300000000001
+        b 100.04900000000001
+        c -91.358999999999995
+        tcp 2
+    }
+    scanPosCount 4
+    scanPos0
+    {
+        x -671.51900000000001
+        y 426.42899999999997
+        z 25.832000000000001
+        a -165.149
+        b 101.502
+        c -79.688000000000002
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName seam2_04
+        spacing 5
+        distance 6
+    }
+    related_seam1
+    {
+        seamName seam2_05
+        spacing 0
+        distance 6
+    }
+    seamType w
+    offset1
+    {
+        x 0
+        y -1.5
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 72
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 25
+        I_W 160
+        V_W 18
+        t_end 1
+        I_end 120
+        V_end 14
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+    scanPos1
+    {
+        x -672.39700000000005
+        y 575.38800000000003
+        z 24.884
+        a -174.36099999999999
+        b 101.943
+        c -94.828999999999994
+        tcp 2
+    }
+    scanPos3
+    {
+        x -1006.842
+        y 1025.326
+        z 109.892
+        a -164.53800000000001
+        b 99.379999999999995
+        c -97.480999999999995
+        tcp 2
+    }
+    wtSeamsList ""
+    rank 2
+    weldCounts 1
+}
+seam2_07
+{
+    midPoint midPoint_r_up
+    departLen 50
+    scanPos4
+    {
+        x -1089.952
+        y 950.76900000000001
+        z 119.96299999999999
+        a -165.43700000000001
+        b 118.127
+        c -127.21899999999999
+        tcp 2
+    }
+    scanPos2
+    {
+        x -863.53499999999997
+        y 759.33100000000002
+        z 50.386000000000003
+        a -168.32400000000001
+        b 123.93600000000001
+        c -113.70099999999999
+        tcp 2
+    }
+    scanPosCount 5
+    scanPos0
+    {
+        x -848.52800000000002
+        y 472.14699999999999
+        z 29.920000000000002
+        a -160.14099999999999
+        b 126.03
+        c -80.659999999999997
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName seam2_08
+        spacing 5
+        distance 0
+    }
+    related_seam1
+    {
+        seamName seam2_11
+        spacing 5
+        distance 0
+    }
+    seamType v
+    offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 12
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp -11552
+    }
+    positioner
+    {
+        angle 72
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 30
+        I_W 230
+        V_W 7
+        t_end 0
+        I_end 0
+        V_end 0
+        range 2
+        frequency 1
+        serialNumber 0
+    }
+    scanPos3
+    {
+        x -965.40700000000004
+        y 885.94200000000001
+        z 86.281999999999996
+        a -166.63300000000001
+        b 120.63800000000001
+        c -121.351
+        tcp 2
+    }
+    scanPos1
+    {
+        x -825.74599999999998
+        y 598.86699999999996
+        z 28.922000000000001
+        a 178.74000000000001
+        b 123.092
+        c -103.443
+        tcp 2
+    }
+}
+seam2_07_1
+{
+    midPoint midPoint_r_up
+    departLen 50
+    scanPos2
+    {
+        x -819.49900000000002
+        y 655.54700000000003
+        z 33.884999999999998
+        a -177.05099999999999
+        b 123.517
+        c -106.854
+        tcp 2
+    }
+    scanPosCount 3
+    scanPos0
+    {
+        x -835.31600000000003
+        y 470.238
+        z 30.116
+        a -160.13399999999999
+        b 126.029
+        c -80.653000000000006
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName seam2_08
+        spacing 5
+        distance 0
+    }
+    related_seam1
+    {
+        seamName none
+        spacing 0
+        distance 0
+    }
+    seamType v
+    offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 72
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 30
+        I_W 240
+        V_W 26
+        t_end 0
+        I_end 0
+        V_end 0
+        range 2
+        frequency 1
+        serialNumber 0
+    }
+    scanPos1
+    {
+        x -813.36300000000006
+        y 575.53200000000004
+        z 29.922999999999998
+        a -177.21799999999999
+        b 123.96599999999999
+        c -99.096999999999994
+        tcp 2
+    }
+    wtSeamsList ""
+    rank 2
+    weldCounts 1
+}
+seam2_07_2
+{
+    midPoint midPoint_r_up
+    departLen 50
+    scanPos2
+    {
+        x -1062.3399999999999
+        y 940.58100000000002
+        z 117.78100000000001
+        a -165.435
+        b 118.125
+        c -127.22799999999999
+        tcp 2
+    }
+    scanPosCount 3
+    scanPos0
+    {
+        x -832.72799999999995
+        y 707.28300000000002
+        z 41.844000000000001
+        a -173.72499999999999
+        b 123.753
+        c -109.467
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName seam2_11
+        spacing 5
+        distance 0
+    }
+    related_seam1
+    {
+        seamName none
+        spacing 0
+        distance 0
+    }
+    seamType v
+    offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 72
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 30
+        I_W 240
+        V_W 26
+        t_end 0
+        I_end 0
+        V_end 0
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+    scanPos1
+    {
+        x -959.22400000000005
+        y 887.13800000000003
+        z 90.472999999999999
+        a -166.62700000000001
+        b 120.636
+        c -121.361
+        tcp 2
+    }
+    wtSeamsList ""
+    rank 2
+    weldCounts 1
+}
+seam2_08
+{
+    midPoint midPoint_r_up
+    departLen 50
+    rank 1
+    scanPosCount 2
+    scanPos0
+    {
+        x -717.64200000000005
+        y 417.71600000000001
+        z 31.882000000000001
+        a -146.47300000000001
+        b 120.73399999999999
+        c -104.319
+        tcp 2
+    }
+    scanPos1
+    {
+        x -807.98400000000004
+        y 450.46199999999999
+        z 30.925000000000001
+        a -146.47399999999999
+        b 120.73699999999999
+        c -104.286
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName seam2_07
+        spacing -30
+        distance 0
+    }
+    related_seam1
+    {
+        seamName none
+        spacing 115
+        distance 0
+    }
+    seamType v
+    offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 72
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 30
+        I_W 240
+        V_W 26
+        t_end 0
+        I_end 0
+        V_end 0
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+    wtSeamsList ""
+    weldCounts 1
+}
+seam2_09
+{
+    midPoint midPoint_r_up
+    departLen 50
+    rank 1
+    scanPosCount 2
+    scanPos0
+    {
+        x -1057.04
+        y 1030.3119999999999
+        z 120.014
+        a -173.25700000000001
+        b 119.273
+        c -88.596000000000004
+        tcp 2
+    }
+    scanPos1
+    {
+        x -1072.518
+        y 987.81200000000001
+        z 118.089
+        a -173.27000000000001
+        b 119.285
+        c -88.617999999999995
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName seam2_07
+        spacing -30
+        distance 0
+    }
+    related_seam1
+    {
+        seamName none
+        spacing 65
+        distance 0
+    }
+    seamType v
+    offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 588363024
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 201350480
+    }
+    positioner
+    {
+        angle 72
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 30
+        I_W 240
+        V_W 7
+        t_end 0
+        I_end 0
+        V_end 0
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+}
+seam2_11
+{
+    midPoint midPoint_r_up
+    departLen 50
+    rank 1
+    scanPos2
+    {
+        x -1058.1220000000001
+        y 940.62699999999995
+        z 171.25800000000001
+        a -167.68799999999999
+        b 111.167
+        c -3.7280000000000002
+        tcp 2
+    }
+    scanPos1
+    {
+        x -1057.1869999999999
+        y 941.67700000000002
+        z 235.268
+        a -167.352
+        b 106.178
+        c -3.6269999999999998
+        tcp 2
+    }
+    scanPosCount 3
+    scanPos0
+    {
+        x -1055.1030000000001
+        y 942.49699999999996
+        z 338.55399999999997
+        a -166.05000000000001
+        b 85.177999999999997
+        c -3.468
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName seam2_07
+        spacing -40
+        distance 0
+    }
+    related_seam1
+    {
+        seamName none
+        spacing 215
+        distance 0
+    }
+    seamType v
+    offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 72
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 50
+        I_W 240
+        V_W 26
+        t_end 0
+        I_end 0
+        V_end 0
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+    wtSeamsList ""
+    weldCounts 1
+}
+seam2_10
+{
+    midPoint midPoint_r_up
+    departLen 50
+    rank 2
+    scanPos2
+    {
+        x -837.34900000000005
+        y 463.077
+        z 77.424999999999997
+        a -151.03899999999999
+        b 109.43300000000001
+        c -2.2130000000000001
+        tcp 2
+    }
+    scanPos1
+    {
+        x -836.76599999999996
+        y 464.06900000000002
+        z 176.94200000000001
+        a -150.756
+        b 102.471
+        c -2.141
+        tcp 2
+    }
+    scanPosCount 3
+    scanPos0
+    {
+        x -837.98800000000006
+        y 464.38099999999997
+        z 342.44999999999999
+        a -150.191
+        b 86.760000000000005
+        c -2.0710000000000002
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName seam2_11
+        spacing 5
+        distance 0
+    }
+    related_seam1
+    {
+        seamName none
+        spacing 0
+        distance 0
+    }
+    seamType v
+    offset1
+    {
+        x 0
+        y 1
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 72
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 30
+        I_W 240
+        V_W 26
+        t_end 0
+        I_end 0
+        V_end 0
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+    wtSeamsList ""
+    weldCounts 1
+}
+seam3_01
+{
+    midPoint midPoint_r_up
+    departLen 50
+    scanPosCount 5
+    scanPos0
+    {
+        x -682.12599999999998
+        y 487.19999999999999
+        z -118.566
+        a -169.755
+        b 126.691
+        c -75.725999999999999
+        tcp 2
+    }
+    scanPos2
+    {
+        x -641.255
+        y 818.72900000000004
+        z -121.13800000000001
+        a 175.096
+        b 126.56
+        c -103.11199999999999
+        tcp 2
+    }
+    scanPos4
+    {
+        x -829.73400000000004
+        y 1074.309
+        z -123.887
+        a -176.58699999999999
+        b 127.19199999999999
+        c -102.048
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName seam3_02
+        spacing 5
+        distance 0
+    }
+    related_seam1
+    {
+        seamName seam3_03
+        spacing 5
+        distance 0
+    }
+    seamType v
+    offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 176.40000000000001
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 30
+        I_W 240
+        V_W 26
+        t_end 0
+        I_end 0
+        V_end 0
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+    scanPos1
+    {
+        x -630.02999999999997
+        y 645.29200000000003
+        z -119.676
+        a 177.66900000000001
+        b 126.958
+        c -90.917000000000002
+        tcp 2
+    }
+    scanPos3
+    {
+        x -714.06200000000001
+        y 969.13300000000004
+        z -122.50700000000001
+        a 179.578
+        b 126.97
+        c -102.539
+        tcp 2
+    }
+    wtSeamsList ""
+    rank 2
+    weldCounts 1
+}
+seam3_02
+{
+    midPoint midPoint_r_up
+    departLen 50
+    rank 2
+    scanPos1
+    {
+        x -675.55999999999995
+        y 500.55399999999997
+        z -76.688000000000002
+        a -158.54900000000001
+        b 112.303
+        c 6.5030000000000001
+        tcp 2
+    }
+    scanPosCount 2
+    scanPos0
+    {
+        x -675.50800000000004
+        y 502.428
+        z 106.361
+        a -158.53299999999999
+        b 112.286
+        c 6.5339999999999998
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName seam3_02
+        spacing 0
+        distance 6
+    }
+    related_seam1
+    {
+        seamName none
+        spacing 0
+        distance 0
+    }
+    seamType w
+    offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 174.40000000000001
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 25
+        I_W 160
+        V_W 18
+        t_end 0
+        I_end 0
+        V_end 0
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+    wtSeamsList ""
+    weldCounts 1
+}
+seam3_03
+{
+    midPoint midPoint_r_up
+    departLen 50
+    rank 1
+    scanPos1
+    {
+        x -834.13699999999994
+        y 1078.0329999999999
+        z -85.585999999999999
+        a -174.34700000000001
+        b 110.821
+        c 0.82699999999999996
+        tcp 2
+    }
+    scanPosCount 2
+    scanPos0
+    {
+        x -834.53800000000001
+        y 1080.982
+        z 186.83500000000001
+        a -174.34899999999999
+        b 110.804
+        c 0.85899999999999999
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName seam3_01
+        spacing -30
+        distance 0
+    }
+    related_seam1
+    {
+        seamName none
+        spacing 340
+        distance 0
+    }
+    seamType v
+    offset1
+    {
+        x 0
+        y 0
+        z 2
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 176.40000000000001
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 50
+        I_W 240
+        V_W 26
+        t_end 0
+        I_end 0
+        V_end 0
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+    wtSeamsList ""
+    weldCounts 1
+}
+seam3_04
+{
+    midPoint midPoint_r_up
+    departLen 50
+    scanPosCount 4
+    scanPos0
+    {
+        x -704.57399999999996
+        y 947.67100000000005
+        z 202.387
+        a -155.749
+        b 98.869
+        c -82.340999999999994
+        tcp 2
+    }
+    scanPos1
+    {
+        x -634.55999999999995
+        y 695.56399999999996
+        z 156.959
+        a -169.18700000000001
+        b 106.462
+        c -78.965000000000003
+        tcp 2
+    }
+    scanPos2
+    {
+        x -653.69600000000003
+        y 563.82399999999996
+        z 134.262
+        a -179.363
+        b 107.69499999999999
+        c -79.126000000000005
+        tcp 2
+    }
+    scanPos3
+    {
+        x -674.84000000000003
+        y 517.70500000000004
+        z 122.617
+        a -171.83000000000001
+        b 111.167
+        c -75.501000000000005
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName seam3_02
+        spacing 0
+        distance 6
+    }
+    related_seam1
+    {
+        seamName none
+        spacing 0
+        distance 0
+    }
+    seamType w
+    offset1
+    {
+        x 0
+        y -1.5
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 174.40000000000001
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 25
+        I_W 160
+        V_W 18
+        t_end 0
+        I_end 0
+        V_end 0
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+    wtSeamsList ""
+    rank 2
+    weldCounts 1
+}
+seam3_05
+{
+    midPoint midPoint_r_up
+    departLen 50
+    scanPosCount 3
+    scanPos0
+    {
+        x -745.99699999999996
+        y 888.79499999999996
+        z 201.78399999999999
+        a 178.42699999999999
+        b 123.495
+        c -103.03100000000001
+        tcp 2
+    }
+    scanPos1
+    {
+        x -715.96699999999998
+        y 696.02200000000005
+        z 159.76499999999999
+        a -179.44
+        b 124.693
+        c -95.623999999999995
+        tcp 2
+    }
+    scanPos2
+    {
+        x -764.197
+        y 550.24199999999996
+        z 125.08499999999999
+        a -176.44
+        b 129.49100000000001
+        c -81.475999999999999
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName seam3_07
+        spacing 5
+        distance 0
+    }
+    related_seam1
+    {
+        seamName none
+        spacing 0
+        distance 0
+    }
+    seamType v
+    offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 176.40000000000001
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 30
+        I_W 240
+        V_W 26
+        t_end 0
+        I_end 0
+        V_end 0
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+    wtSeamsList ""
+    rank 2
+    weldCounts 1
+}
+seam3_06
+{
+    midPoint midPoint_r_up
+    departLen 50
+    rank 1
+    scanPosCount 2
+    scanPos0
+    {
+        x -670.14099999999996
+        y 510.81599999999997
+        z 121.95399999999999
+        a -144.38
+        b 128.95099999999999
+        c -143.339
+        tcp 2
+    }
+    scanPos1
+    {
+        x -725.697
+        y 545.13099999999997
+        z 123.413
+        a -144.39099999999999
+        b 128.96700000000001
+        c -143.33699999999999
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName seam3_02
+        spacing -6
+        distance 0
+    }
+    related_seam1
+    {
+        seamName none
+        spacing 65
+        distance 0
+    }
+    seamType v
+    offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 588363024
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 201350480
+    }
+    positioner
+    {
+        angle 176.40000000000001
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 30
+        I_W 240
+        V_W 7
+        t_end 0
+        I_end 0
+        V_end 0
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+}
+seam3_07
+{
+    midPoint midPoint_r_up
+    departLen 50
+    rank 1
+    scanPos2
+    {
+        x -767.14099999999996
+        y 543.64999999999998
+        z 161.44800000000001
+        a -158.98599999999999
+        b 112.50700000000001
+        c 1.3129999999999999
+        tcp 2
+    }
+    scanPos1
+    {
+        x -767.06899999999996
+        y 544.74000000000001
+        z 234.679
+        a -159.25999999999999
+        b 104.518
+        c 1.802
+        tcp 2
+    }
+    scanPosCount 3
+    scanPos0
+    {
+        x -764.68100000000004
+        y 545.23400000000004
+        z 343.50799999999998
+        a -160.04300000000001
+        b 79.179000000000002
+        c 1.784
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName seam3_05
+        spacing -35
+        distance 0
+    }
+    related_seam1
+    {
+        seamName none
+        spacing 215
+        distance 0
+    }
+    seamType v
+    offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 176.40000000000001
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 50
+        I_W 240
+        V_W 26
+        t_end 0
+        I_end 0
+        V_end 0
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+    wtSeamsList ""
+    weldCounts 1
+}
+seam4_01
+{
+    midPoint midPoint_r_up
+    departLen 50
+    scanPosCount 3
+    scanPos0
+    {
+        x -661.46900000000005
+        y 878.15700000000004
+        z -122.06399999999999
+        a -165.21299999999999
+        b 124.471
+        c -91.281000000000006
+        tcp 2
+    }
+    scanPos1
+    {
+        x -559.69799999999998
+        y 637.79200000000003
+        z -121.61499999999999
+        a -158.708
+        b 130.19999999999999
+        c -74.828999999999994
+        tcp 2
+    }
+    scanPos2
+    {
+        x -589.85199999999998
+        y 453.94400000000002
+        z -119.273
+        a -160.262
+        b 130.56
+        c -73.784999999999997
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName seam4_02
+        spacing 5
+        distance 0
+    }
+    related_seam1
+    {
+        seamName none
+        spacing 0
+        distance 0
+    }
+    seamType v
+    offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 259.19999999999999
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 30
+        I_W 240
+        V_W 26
+        t_end 0
+        I_end 0
+        V_end 0
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+    wtSeamsList ""
+    rank 2
+    weldCounts 1
+}
+seam4_02
+{
+    midPoint midPoint_r_up
+    departLen 50
+    rank 1
+    scanPosCount 2
+    scanPos0
+    {
+        x -587.04700000000003
+        y 460.75
+        z 212.53899999999999
+        a -157.63399999999999
+        b 115.34099999999999
+        c 2.004
+        tcp 2
+    }
+    scanPos1
+    {
+        x -587.27800000000002
+        y 457.43299999999999
+        z -85.457999999999998
+        a -157.64699999999999
+        b 115.35899999999999
+        c 1.982
+        tcp 2
+    }
+    related_seam0
+    {
+        seamName seam4_01
+        spacing -30
+        distance 0
+    }
+    related_seam1
+    {
+        seamName none
+        spacing 345
+        distance 0
+    }
+    seamType v
+    offset1
+    {
+        x 0
+        y 0
+        z 2
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    base_offset1
+    {
+        x 0
+        y 0
+        z 0
+        a 0
+        b 0
+        c 0
+        tcp 2
+    }
+    positioner
+    {
+        angle 259.19999999999999
+        height 0
+    }
+    weldingArg1
+    {
+        S_W 50
+        I_W 240
+        V_W 26
+        t_end 0
+        I_end 0
+        V_end 0
+        range 0
+        frequency 0
+        serialNumber 0
+    }
+    wtSeamsList ""
+    weldCounts 1
+}
+autoDetectFace
+{
+    pos0
+    {
+        x -522.08299999999997
+        y 107.21299999999999
+        z 32.165999999999997
+        a 75.149000000000001
+        b 104.96299999999999
+        c -4.875
+        tcp 2
+        a1 -128.822
+        a2 28.390999999999998
+        a3 -127.72799999999999
+        a4 -31.274000000000001
+        a5 -82.209999999999994
+        a6 -52.155000000000001
+    }
+    zero 100
+    ora
+    {
+        r 117.79594889591434
+        xita 1.1511107177074658
+        fi 0.23642847412140194
+    }
+    cur
+    {
+        r 117.79594889591434
+        xita 1.1511107177074658
+        fi 0.23642847412140194
+    }
+    midPos midPoint_l_up
+    chkPos midPoint_r_up
+    check0
+    {
+        x -746.12099999999998
+        y 931.17700000000002
+        z -65
+        a -170.774
+        b 117.16
+        c -3.7669999999999999
+        tcp 2
+    }
+    check1
+    {
+        x -333.43200000000002
+        y 252.024
+        z -50
+        a -123.324
+        b 127.506
+        c -3.0430000000000001
+        tcp 2
+    }
+    check2
+    {
+        x -851.024
+        y 786.52300000000002
+        z 183.39699999999999
+        a 179.90100000000001
+        b 104.637
+        c 0.32800000000000001
+        tcp 2
+    }
+    check3
+    {
+        x -774.08900000000006
+        y 290.98899999999998
+        z 155.601
+        a -156.94200000000001
+        b 103.114
+        c -8.1899999999999995
+        tcp 2
+    }
+    dx -2.1140490311712199
+    dy 5.0755606210035609
+    zeroPos
+    {
+        a1 -49.046999999999997
+        a2 -3.5510000000000002
+        a3 -87.600999999999999
+        a4 -9.1880000000000006
+        a5 -78.793000000000006
+        a6 4.8639999999999999
+    }
+}

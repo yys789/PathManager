@@ -1,0 +1,5 @@
+2020-04-14 08:28:09: [Warning]: QMetaObject::connectSlotsByName: No matching signal for on_send_clicked() Function:  Line:  File: 0
+2020-04-14 11:10:09: [Warning]: QMetaObject::connectSlotsByName: No matching signal for on_send_clicked() Function:  Line:  File: 0
+2020-04-14 11:15:24: [Warning]: QMetaObject::connectSlotsByName: No matching signal for on_send_clicked() Function:  Line:  File: 0
+2020-04-14 11:17:14: [Warning]: QMetaObject::connectSlotsByName: No matching signal for on_send_clicked() Function:  Line:  File: 0
+2020-04-14 17:32:44: [Warning]: QMetaObject::connectSlotsByName: No matching signal for on_send_clicked() Function:  Line:  File: 0
