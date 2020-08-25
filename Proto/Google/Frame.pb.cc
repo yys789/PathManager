@@ -262,6 +262,9 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Frame_2eproto::offsets[] PROTO
   PROTOBUF_FIELD_OFFSET(::frame::AScanePos, camera_),
   PROTOBUF_FIELD_OFFSET(::frame::AScanePos, enabled_),
   PROTOBUF_FIELD_OFFSET(::frame::AScanePos, index1_),
+  PROTOBUF_FIELD_OFFSET(::frame::AScanePos, angle1_),
+  PROTOBUF_FIELD_OFFSET(::frame::AScanePos, angle2_),
+  PROTOBUF_FIELD_OFFSET(::frame::AScanePos, angle3_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::frame::AFramePos, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -381,15 +384,15 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Frame_2eproto::offsets[] PROTO
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::frame::Pos)},
   { 11, -1, sizeof(::frame::AScanePos)},
-  { 20, -1, sizeof(::frame::AFramePos)},
-  { 33, -1, sizeof(::frame::SeamRelate)},
-  { 45, -1, sizeof(::frame::SeamWeldInfo)},
-  { 53, -1, sizeof(::frame::WeldParament)},
-  { 67, -1, sizeof(::frame::Cad)},
-  { 77, -1, sizeof(::frame::Machine)},
-  { 91, -1, sizeof(::frame::SeamModify)},
-  { 110, -1, sizeof(::frame::SeamInfo)},
-  { 127, -1, sizeof(::frame::Frame)},
+  { 23, -1, sizeof(::frame::AFramePos)},
+  { 36, -1, sizeof(::frame::SeamRelate)},
+  { 48, -1, sizeof(::frame::SeamWeldInfo)},
+  { 56, -1, sizeof(::frame::WeldParament)},
+  { 70, -1, sizeof(::frame::Cad)},
+  { 80, -1, sizeof(::frame::Machine)},
+  { 94, -1, sizeof(::frame::SeamModify)},
+  { 113, -1, sizeof(::frame::SeamInfo)},
+  { 130, -1, sizeof(::frame::Frame)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -409,48 +412,50 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 const char descriptor_table_protodef_Frame_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\013Frame.proto\022\005frame\"G\n\003Pos\022\t\n\001x\030\001 \001(\001\022\t"
   "\n\001y\030\002 \001(\001\022\t\n\001z\030\003 \001(\001\022\t\n\001a\030\004 \001(\001\022\t\n\001b\030\005 \001"
-  "(\001\022\t\n\001c\030\006 \001(\001\"U\n\tAScanePos\022\027\n\003pos\030\001 \001(\0132"
-  "\n.frame.Pos\022\016\n\006camera\030\002 \001(\005\022\017\n\007enabled\030\003"
-  " \001(\005\022\016\n\006index1\030\004 \001(\005\"\223\001\n\tAFramePos\022\027\n\003po"
-  "s\030\001 \001(\0132\n.frame.Pos\022\014\n\004weld\030\002 \001(\005\022\016\n\006hei"
-  "ght\030\003 \001(\005\022\017\n\007enabled\030\004 \001(\005\022\016\n\006index1\030\005 \001"
-  "(\005\022\016\n\006angle1\030\006 \001(\001\022\016\n\006angle2\030\007 \001(\001\022\016\n\006an"
-  "gle3\030\010 \001(\001\"\204\001\n\nSeamRelate\022\020\n\010spacing1\030\001 "
-  "\001(\001\022\021\n\tdistance1\030\002 \001(\001\022\020\n\010spacing2\030\003 \001(\001"
-  "\022\021\n\tdistance2\030\004 \001(\001\022\r\n\005bind1\030\005 \001(\005\022\r\n\005bi"
-  "nd2\030\006 \001(\005\022\016\n\006seFlag\030\007 \001(\005\"]\n\014SeamWeldInf"
-  "o\022\021\n\tweldorder\030\001 \001(\005\022\032\n\006offset\030\002 \001(\0132\n.f"
-  "rame.Pos\022\036\n\nbaseoffset\030\003 \001(\0132\n.frame.Pos"
-  "\"\221\001\n\014WeldParament\022\013\n\003s_w\030\001 \001(\005\022\013\n\003i_w\030\002 "
-  "\001(\005\022\013\n\003v_w\030\003 \001(\005\022\r\n\005t_end\030\004 \001(\005\022\r\n\005i_end"
-  "\030\005 \001(\005\022\r\n\005v_end\030\006 \001(\005\022\r\n\005range\030\007 \001(\005\022\016\n\006"
-  "axis_x\030\010 \001(\005\022\016\n\006axis_y\030\t \001(\005\"n\n\003Cad\022\r\n\005c"
-  "adid\030\001 \001(\t\022\023\n\013cadMidPoint\030\002 \001(\005\022\036\n\ncadBa"
-  "sePos\030\003 \001(\0132\n.frame.Pos\022\022\n\nsafeAngle1\030\004 "
-  "\001(\001\022\017\n\007safeLoc\030\005 \001(\005\"\347\001\n\007Machine\022\027\n\017pos_"
-  "motor_start\030\001 \001(\001\022\026\n\016pos_motor_stop\030\002 \001("
-  "\001\022\032\n\022angle1_motor_start\030\003 \001(\001\022\031\n\021angle1_"
-  "motor_stop\030\004 \001(\001\022\032\n\022angle2_motor_start\030\005"
-  " \001(\001\022\031\n\021angle2_motor_stop\030\006 \001(\001\022\023\n\013motor"
-  "1speed\030\007 \001(\001\022\023\n\013motor2speed\030\010 \001(\001\022\023\n\013mot"
-  "or3speed\030\t \001(\001\"\377\001\n\nSeamModify\022\014\n\004main\030\001 "
-  "\001(\005\022\014\n\004rank\030\002 \001(\005\022\020\n\010seamType\030\003 \001(\t\022\021\n\tD"
-  "EPARTLEN\030\004 \001(\001\022\020\n\010midPoint\030\005 \001(\005\022\023\n\013MIDD"
-  "LESTART\030\006 \001(\005\022\017\n\007option1\030\007 \001(\t\022\017\n\007autoFi"
-  "t\030\010 \001(\005\022\017\n\007tracing\030\t \001(\005\022\r\n\005width\030\n \001(\001\022"
-  "\016\n\006height\030\013 \001(\001\022\021\n\tCORNERLEN\030\014 \001(\005\022\023\n\013CO"
-  "RNERANGLE\030\r \001(\005\022\017\n\007enabled\030\016 \001(\005\"\337\002\n\010Sea"
-  "mInfo\022\"\n\010framePos\030\001 \003(\0132\020.frame.AFramePo"
-  "s\022\"\n\010scanePos\030\002 \003(\0132\020.frame.AScanePos\022!\n"
-  "\006relate\030\003 \001(\0132\021.frame.SeamRelate\022%\n\010weld"
-  "info\030\004 \001(\0132\023.frame.SeamWeldInfo\022%\n\010weldP"
-  "ara\030\005 \001(\0132\023.frame.WeldParament\022\020\n\010seamNa"
-  "me\030\006 \001(\t\022\016\n\006seamID\030\007 \001(\005\022\022\n\norderIndex\030\010"
-  " \001(\005\022\021\n\tseamIndex\030\t \001(\005\022\r\n\005cadid\030\n \001(\t\022\037"
-  "\n\007machine\030\013 \001(\0132\016.frame.Machine\022!\n\006modif"
-  "y\030\014 \001(\0132\021.frame.SeamModify\"N\n\005Frame\022\036\n\005s"
-  "eams\030\001 \003(\0132\017.frame.SeamInfo\022\027\n\003cad\030\002 \003(\013"
-  "2\n.frame.Cad\022\014\n\004date\030\003 \001(\tb\006proto3"
+  "(\001\022\t\n\001c\030\006 \001(\001\"\205\001\n\tAScanePos\022\027\n\003pos\030\001 \001(\013"
+  "2\n.frame.Pos\022\016\n\006camera\030\002 \001(\005\022\017\n\007enabled\030"
+  "\003 \001(\005\022\016\n\006index1\030\004 \001(\005\022\016\n\006angle1\030\005 \001(\001\022\016\n"
+  "\006angle2\030\006 \001(\001\022\016\n\006angle3\030\007 \001(\001\"\223\001\n\tAFrame"
+  "Pos\022\027\n\003pos\030\001 \001(\0132\n.frame.Pos\022\014\n\004weld\030\002 \001"
+  "(\005\022\016\n\006height\030\003 \001(\005\022\017\n\007enabled\030\004 \001(\005\022\016\n\006i"
+  "ndex1\030\005 \001(\005\022\016\n\006angle1\030\006 \001(\001\022\016\n\006angle2\030\007 "
+  "\001(\001\022\016\n\006angle3\030\010 \001(\001\"\204\001\n\nSeamRelate\022\020\n\010sp"
+  "acing1\030\001 \001(\001\022\021\n\tdistance1\030\002 \001(\001\022\020\n\010spaci"
+  "ng2\030\003 \001(\001\022\021\n\tdistance2\030\004 \001(\001\022\r\n\005bind1\030\005 "
+  "\001(\005\022\r\n\005bind2\030\006 \001(\005\022\016\n\006seFlag\030\007 \001(\005\"]\n\014Se"
+  "amWeldInfo\022\021\n\tweldorder\030\001 \001(\005\022\032\n\006offset\030"
+  "\002 \001(\0132\n.frame.Pos\022\036\n\nbaseoffset\030\003 \001(\0132\n."
+  "frame.Pos\"\221\001\n\014WeldParament\022\013\n\003s_w\030\001 \001(\005\022"
+  "\013\n\003i_w\030\002 \001(\005\022\013\n\003v_w\030\003 \001(\005\022\r\n\005t_end\030\004 \001(\005"
+  "\022\r\n\005i_end\030\005 \001(\005\022\r\n\005v_end\030\006 \001(\005\022\r\n\005range\030"
+  "\007 \001(\005\022\016\n\006axis_x\030\010 \001(\005\022\016\n\006axis_y\030\t \001(\005\"n\n"
+  "\003Cad\022\r\n\005cadid\030\001 \001(\t\022\023\n\013cadMidPoint\030\002 \001(\005"
+  "\022\036\n\ncadBasePos\030\003 \001(\0132\n.frame.Pos\022\022\n\nsafe"
+  "Angle1\030\004 \001(\001\022\017\n\007safeLoc\030\005 \001(\005\"\347\001\n\007Machin"
+  "e\022\027\n\017pos_motor_start\030\001 \001(\001\022\026\n\016pos_motor_"
+  "stop\030\002 \001(\001\022\032\n\022angle1_motor_start\030\003 \001(\001\022\031"
+  "\n\021angle1_motor_stop\030\004 \001(\001\022\032\n\022angle2_moto"
+  "r_start\030\005 \001(\001\022\031\n\021angle2_motor_stop\030\006 \001(\001"
+  "\022\023\n\013motor1speed\030\007 \001(\001\022\023\n\013motor2speed\030\010 \001"
+  "(\001\022\023\n\013motor3speed\030\t \001(\001\"\377\001\n\nSeamModify\022\014"
+  "\n\004main\030\001 \001(\005\022\014\n\004rank\030\002 \001(\005\022\020\n\010seamType\030\003"
+  " \001(\t\022\021\n\tDEPARTLEN\030\004 \001(\001\022\020\n\010midPoint\030\005 \001("
+  "\005\022\023\n\013MIDDLESTART\030\006 \001(\005\022\017\n\007option1\030\007 \001(\t\022"
+  "\017\n\007autoFit\030\010 \001(\005\022\017\n\007tracing\030\t \001(\005\022\r\n\005wid"
+  "th\030\n \001(\001\022\016\n\006height\030\013 \001(\001\022\021\n\tCORNERLEN\030\014 "
+  "\001(\005\022\023\n\013CORNERANGLE\030\r \001(\005\022\017\n\007enabled\030\016 \001("
+  "\005\"\337\002\n\010SeamInfo\022\"\n\010framePos\030\001 \003(\0132\020.frame"
+  ".AFramePos\022\"\n\010scanePos\030\002 \003(\0132\020.frame.ASc"
+  "anePos\022!\n\006relate\030\003 \001(\0132\021.frame.SeamRelat"
+  "e\022%\n\010weldinfo\030\004 \001(\0132\023.frame.SeamWeldInfo"
+  "\022%\n\010weldPara\030\005 \001(\0132\023.frame.WeldParament\022"
+  "\020\n\010seamName\030\006 \001(\t\022\016\n\006seamID\030\007 \001(\005\022\022\n\nord"
+  "erIndex\030\010 \001(\005\022\021\n\tseamIndex\030\t \001(\005\022\r\n\005cadi"
+  "d\030\n \001(\t\022\037\n\007machine\030\013 \001(\0132\016.frame.Machine"
+  "\022!\n\006modify\030\014 \001(\0132\021.frame.SeamModify\"N\n\005F"
+  "rame\022\036\n\005seams\030\001 \003(\0132\017.frame.SeamInfo\022\027\n\003"
+  "cad\030\002 \003(\0132\n.frame.Cad\022\014\n\004date\030\003 \001(\tb\006pro"
+  "to3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_Frame_2eproto_deps[1] = {
 };
@@ -470,7 +475,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Fra
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_Frame_2eproto_once;
 static bool descriptor_table_Frame_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Frame_2eproto = {
-  &descriptor_table_Frame_2eproto_initialized, descriptor_table_protodef_Frame_2eproto, "Frame.proto", 1754,
+  &descriptor_table_Frame_2eproto_initialized, descriptor_table_protodef_Frame_2eproto, "Frame.proto", 1803,
   &descriptor_table_Frame_2eproto_once, descriptor_table_Frame_2eproto_sccs, descriptor_table_Frame_2eproto_deps, 11, 0,
   schemas, file_default_instances, TableStruct_Frame_2eproto::offsets,
   file_level_metadata_Frame_2eproto, 11, file_level_enum_descriptors_Frame_2eproto, file_level_service_descriptors_Frame_2eproto,
@@ -891,6 +896,27 @@ const char* AScanePos::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
+      // double angle1 = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 41)) {
+          angle1_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else goto handle_unusual;
+        continue;
+      // double angle2 = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 49)) {
+          angle2_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else goto handle_unusual;
+        continue;
+      // double angle3 = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 57)) {
+          angle3_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
@@ -943,6 +969,24 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->_internal_index1(), target);
   }
 
+  // double angle1 = 5;
+  if (!(this->angle1() <= 0 && this->angle1() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(5, this->_internal_angle1(), target);
+  }
+
+  // double angle2 = 6;
+  if (!(this->angle2() <= 0 && this->angle2() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(6, this->_internal_angle2(), target);
+  }
+
+  // double angle3 = 7;
+  if (!(this->angle3() <= 0 && this->angle3() >= 0)) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(7, this->_internal_angle3(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
@@ -978,6 +1022,21 @@ size_t AScanePos::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_enabled());
+  }
+
+  // double angle1 = 5;
+  if (!(this->angle1() <= 0 && this->angle1() >= 0)) {
+    total_size += 1 + 8;
+  }
+
+  // double angle2 = 6;
+  if (!(this->angle2() <= 0 && this->angle2() >= 0)) {
+    total_size += 1 + 8;
+  }
+
+  // double angle3 = 7;
+  if (!(this->angle3() <= 0 && this->angle3() >= 0)) {
+    total_size += 1 + 8;
   }
 
   // int32 index1 = 4;
@@ -1027,6 +1086,15 @@ void AScanePos::MergeFrom(const AScanePos& from) {
   if (from.enabled() != 0) {
     _internal_set_enabled(from._internal_enabled());
   }
+  if (!(from.angle1() <= 0 && from.angle1() >= 0)) {
+    _internal_set_angle1(from._internal_angle1());
+  }
+  if (!(from.angle2() <= 0 && from.angle2() >= 0)) {
+    _internal_set_angle2(from._internal_angle2());
+  }
+  if (!(from.angle3() <= 0 && from.angle3() >= 0)) {
+    _internal_set_angle3(from._internal_angle3());
+  }
   if (from.index1() != 0) {
     _internal_set_index1(from._internal_index1());
   }
@@ -1056,6 +1124,9 @@ void AScanePos::InternalSwap(AScanePos* other) {
   swap(pos_, other->pos_);
   swap(camera_, other->camera_);
   swap(enabled_, other->enabled_);
+  swap(angle1_, other->angle1_);
+  swap(angle2_, other->angle2_);
+  swap(angle3_, other->angle3_);
   swap(index1_, other->index1_);
 }
 
