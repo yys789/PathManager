@@ -82,9 +82,9 @@ struct Pos{
 struct AFramePos{
     Pos pos = Pos(-1,-1,-1,-1,-1,-1);             // 工件坐标
 
-    double angle1 = 0.0;
-    double angle2 = 0.0;
-    double angle3 = 0.0;
+    double angle1 = 1.1;
+    double angle2 = 1.1;
+    double angle3 = 1.1;
 
     /* 可能不需要填写的数据 */
     int index1 = 0;          //区分顺序
